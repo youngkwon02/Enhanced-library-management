@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "cjdthsus2gh",
+      "name": "cjdthsus2gh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29909720?v=4",
+      "profile": "https://github.com/cjdthsus2gh",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "enhanced-library-management",
+  "projectOwner": "2021-caucse-software-engineering",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
