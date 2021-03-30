@@ -1,6 +1,6 @@
 # enhanced-library-management
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 Enhanced Library Management System for Software Engineering Class
 
@@ -24,6 +24,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/cjdthsus2gh"><img src="https://avatars.githubusercontent.com/u/29909720?v=4?s=100" width="100px;" alt=""/><br /><sub><b>cjdthsus2gh</b></sub></a><br /><a href="https://github.com/2021-caucse-software-engineering/enhanced-library-management/commits?author=cjdthsus2gh" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Beopsik"><img src="https://avatars.githubusercontent.com/u/29909335?v=4?s=100" width="100px;" alt=""/><br /><sub><b>b.sik</b></sub></a><br /><a href="https://github.com/2021-caucse-software-engineering/enhanced-library-management/commits?author=Beopsik" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/d0lim"><img src="https://avatars.githubusercontent.com/u/23608029?v=4?s=100" width="100px;" alt=""/><br /><sub><b>D0Lim</b></sub></a><br /><a href="https://github.com/2021-caucse-software-engineering/enhanced-library-management/commits?author=d0lim" title="Documentation">📖</a></td>
   </tr>
 </table>
 
