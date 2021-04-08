@@ -43,8 +43,7 @@
 | REQ-44     | 4        | The system shall show information ( title, author, location, price, numbers of the borrowable, whether the book can be read as e-book ) of each books if cover of the book is clicked.         |        F              |
 | REQ-45     | 3        | The system shall display the issued book on the guest's 'checking book issue menu'.                                                                                                              |          F          |
 | REQ-46     | 5        | The system shall issue e-book to guest if the book can be read as e-book.                                                                                                                      |          F             |
-| REQ-47     |         | The system shall allow guest to read issued e-book on web during 2 weeks. 
-                                       |                        |
+| REQ-47     |          | The system shall allow guest to read issued e-book on web during 2 weeks.                                                                                                                      |                        |
 | REQ-48     | 1        | The system should allow guest to change the order of listed books based on alphabetical order of title, author, publication date.                                                              |          F             |
 | REQ-49     | 1        | The system should allow guest to select the conditions (genre, range of price) for which books to view.                                                                                        |          F             |
 | REQ-50     | 2        | The system should allow guest to search the title, author of the books.                                                                                                                        |          F            |
