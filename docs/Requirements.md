@@ -38,10 +38,8 @@
 | REQ-36     | 3        | The system shall allow a manager to add guests.                                                                                                                                                | F                     |
 | REQ-37     | 3        | The system shall make a manager to enter name, phone number, password, profile photo, and e-mail of a guest and click 'save' button so that the guest registers as a member.                   | F                     |
 | REQ-38     | 2        | The system shall restrict a manager to add a guest if the guest is already a registered member.                                                                                                 | F                     |
-| REQ-39     |         | 
-                                        |                      |
-| REQ-40     |         | 
-                                        |                      |
+| REQ-39     |          |                                                                                                                                                                                                  |                     |
+| REQ-40     |          |                                                                                                                                                                                                 |                      |
 | REQ-41     | 4        | The system shall provide book's information ( title, author, location, price, numbers of the borrowable, whether the book can be read as e-book ) to guest.                                  | F                     |
 | REQ-42     | 3        | The system shall provide 'paper-book issued information' (title, issue start date, due date, overdue state, late fee) to guest.                                                                 | F                     |
 |            | 3        | The system shall provide 'e-book issued information' (title, issue start date, due date) to guest.                                                                                            | F                     |
@@ -51,20 +49,13 @@
 |            | 4        | The system shall allow guest to access e-book only by during 'e-book reading time'                                                                                                            |   F                  |
 | REQ-45     | 1        | The system should allow guest to change the order of listed books based on alphabetical order of title, author, publication date.                                                              | F                     |
 | REQ-46     | 1        | The system should allow guest to select the conditions (genre, range of price) for which books to view.                                                                                        | F                     |
-| REQ-47     |         |                              
-                                       |                      |
-| REQ-48     |         |     
-                                        |                      |
-| REQ-49     |         |       
-                                        |                      |
-| REQ-50     |         |       
-                                        |                      |
-| REQ-51     |         |         
-                                        |                     |
-| REQ-52     |         |     
-                                        |                     |
-| REQ-53     |         |     
-                                        |                       |
+| REQ-47     |         |                                                                                                                                                                                                 |                      |
+| REQ-48     |         |                                                                                                                                                                                                |                      |
+| REQ-49     |         |                                                                                                                                                                                                  |                      |
+| REQ-50     |         |                                                                                                                                                                                                  |                      |
+| REQ-51     |         |                                                                                                                                                                                                  |                     |
+| REQ-52     |         |                                                                                                                                                                                                   |                     |
+| REQ-53     |         |                                                                                                                                                                                                  |                       |
 | REQ-54     | 3        | The system shall remove E-book list after it is due.                                                                                                                                           |           F          |
 | REQ-55     | 3        | The system should provide guest with the function for extending the rental period.                                                                                                               |           F           |
 | REQ-56     | 1        | The system should set 'period of extending due date' of 1 weeks.                                                                                                                                |           NF           |
