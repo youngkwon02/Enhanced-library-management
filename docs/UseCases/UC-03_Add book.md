@@ -2,27 +2,27 @@
 
 ## **Related Requirements**
 
-- REQ-3, REQ-4, and REQ-5
+ REQ-3, REQ-4, and REQ-5
 
 ## **Initiating Actors**
 
-- Manager
+ Manager
 
 ## **Actor's Goal**
 
-- To add book in library system
+ To add book in library system
 
 ## **Participating Actors**
 
-- 
+X 
 
 ## **Preconditions**
 
-- Manager click add book menu
+ Manager click add book menu
 
 ## **Postconditions**
 
-- The system should modify the quantity of book
+ The system should modify the quantity of book
 
 
 ## Flow of Events for Main Success Scenario
