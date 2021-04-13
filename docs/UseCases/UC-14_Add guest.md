@@ -1,4 +1,4 @@
-#Use Case: Add guest
+# Use Case: Add guest
 
 ## **Related Requirements**
 
