@@ -18,11 +18,11 @@ X
 
 ## **Preconditions**
 
- Manager click add book menu
+- Manager click add book menu
 
 ## **Postconditions**
 
- The system should modify the quantity of book
+- The system should modify the quantity of book
 
 
 ## Flow of Events for Main Success Scenario
