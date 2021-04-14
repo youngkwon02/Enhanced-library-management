@@ -1,4 +1,4 @@
-# Use Case: Delete guest
+# Use Case: Delete Guest
 
 ## **Related Requirements**
 
