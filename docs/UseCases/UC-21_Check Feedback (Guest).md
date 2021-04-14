@@ -1,4 +1,4 @@
-# Use Case: View Feedback (Guest)
+# Use Case: Check Feedback (Guest)
 
 ## **Related Requirements**
 
