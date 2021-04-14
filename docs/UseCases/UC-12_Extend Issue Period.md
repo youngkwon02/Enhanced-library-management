@@ -1,4 +1,4 @@
-# Use Case: Extend Rental Period
+# Use Case: Extend Issue Period
 
 ## **Related Requirements**
 
