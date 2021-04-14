@@ -1,4 +1,4 @@
-# Use Case: Issue paper-book
+# Use Case: Issue Paper-Book
 ## **Related Requirements**
 
 Req06, Req07, Req08, Req09, Req10,Req11, Req12, Req13, Req14, Req15, Req21
