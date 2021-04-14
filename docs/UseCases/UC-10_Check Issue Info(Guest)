@@ -38,5 +38,5 @@ X
 2a. User inputs invalid ID and password in the blank.
 | Direction | n | Actor Action                                                                                                         |
 | --------- | - | -------------------------------------------------------------------------------------------------------------------- |
-|           | 1 | If book issue date exceeds returning period, |
-| ←         | 2 | System (a)return the exceeded period book and (b)delete that e-book's information at 'e-book tab'  |
+|           | 4-1a | If book issue date exceeds returning period, |
+| ←         | 1 | System (a)return the exceeded period book and (b)delete that e-book's information at 'e-book tab'  |
