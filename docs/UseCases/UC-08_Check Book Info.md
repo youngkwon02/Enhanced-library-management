@@ -41,6 +41,13 @@ Database
 
 ## Flow of Events for Extensions (Alternate Scenarios)
 
+2a. Actor is in other menu page.
+
+| Direction | n   | Actor Action                              |
+| --------- | --- | ----------------------------------------- |
+| →         | 1   | Actor clicks Check book info in menu tab. |
+|           |     | same as step 2 above                      |
+
 3a. Actor just selects a book without searching.
 
 | Direction | n   | Actor Action         |
