@@ -14,11 +14,11 @@ To safely finish the use of the system.
 
 ## **Participating Actors**
 
-X
+
 
 ## **Preconditions**
 
-- 
+- The system displays the 'logout' button.
 
 ## **Postconditions**
 
