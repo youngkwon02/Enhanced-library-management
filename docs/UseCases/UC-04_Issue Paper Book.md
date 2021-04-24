@@ -30,7 +30,7 @@ Guest, Database
 | Direction | n | Actor Action                                                                                                         |
 | --------- | - | -------------------------------------------------------------------------------------------------------------------- |
 |           | 1 | Include Login. |
-| →         | 2 | System shows input fields for searching Guest's information. |
+| →         | 2 | Manager clicks Book Issue button. |
 | ←         | 3 | System shows input fields for searching Guest's information. |
 | →         | 4 | Manager searches for a guest with a name or ID.|
 | ←         | 5 | System prepares a database query of guests that best matches with the Manager’s search criteria. |
