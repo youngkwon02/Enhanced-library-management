@@ -12,16 +12,16 @@
 
 
 ## Extracting the Associations
-| Concept1   | _   | Concept2            | Association Description                                                                   | Association name |
-| ---------- | --- | ------------------- | ----------------------------------------------------------------------------------------- | ---------------- |
-| Controller | ⬌   | Database Connection | Controller passes requests to Database Connection.                                        | conveys requests |
-| Controller | ⬌   | Page Maker          | Database Connection passes the retrieved data to Page Maker to render them for display.   | provides data    |
-| Page Maker | ⬌   | Interface Page      | Page Maker prepares the Interface Page.                                                   | prepares         |
-| Controller | ⬌   | Page Maker          | Controller passes requests to Page Maker and receives back pages prepared for displaying. | conveys requests |
-| Controller | ⬌   | Interface Page      | Controller posts pages to Interface Page for displaying.                                  | posts            |
-| Controller | ⬌   | Archiver            | Controller passes a list of returning records to Archiver which creates Return Request.   | conveys requests |
-| Archiver   | ⬌   | Return Request      | Archiver generates Return Request.                                                        | generates        |
-| Archiver   | ⬌   | Database Connection | Archiver requests Database Connection to update Return Request into the database.         | requests update  |
+| Concept1            | _   | Concept2            | Association Description                                                                   | Association name |
+| ------------------- | --- | ------------------- | ----------------------------------------------------------------------------------------- | ---------------- |
+| Controller          | ⬌   | Database Connection | Controller passes requests to Database Connection.                                        | conveys requests |
+| Database Connection | ⬌   | Page Maker          | Database Connection passes the retrieved data to Page Maker to render them for display.   | provides data    |
+| Page Maker          | ⬌   | Interface Page      | Page Maker prepares the Interface Page.                                                   | prepares         |
+| Controller          | ⬌   | Page Maker          | Controller passes requests to Page Maker and receives back pages prepared for displaying. | conveys requests |
+| Controller          | ⬌   | Interface Page      | Controller posts pages to Interface Page for displaying.                                  | posts            |
+| Controller          | ⬌   | Archiver            | Controller passes a list of returning records to Archiver which creates Return Request.   | conveys requests |
+| Archiver            | ⬌   | Return Request      | Archiver generates Return Request.                                                        | generates        |
+| Archiver            | ⬌   | Database Connection | Archiver requests Database Connection to update Return Request into the database.         | requests update  |
 
 
 ## Extracting the Attributes
