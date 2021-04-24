@@ -10,36 +10,44 @@ Manager
 
 ## **Actor's Goal**
 
-Delete the guest from the library system.
+To delete the guest from the system.
 
 ## **Participating Actors**
 
+Database
  
 ## **Preconditions**
 
-- Manager click delete/restrict guest menu.
+Manager is logged in the system and is shown a 'delete/restrict guest' menu.
 
 ## **Postconditions**
 
-- The guest should be deleted from the library system.  If the deleted guest did not return the book, subtract the quantity not returned to the total quantity of book.  And the guest can never use the library system.
+- The guest is deleted from the library system.
+- The library system is no longer available to deleted guest.
 
 ## Flow of Events for Main Success Scenario
 | Direction | n | Actor Action                                                                                                         |
 | --------- | - | -------------------------------------------------------------------------------------------------------------------- |
-|            | 1 | Include Login |
-| ←         | 2 | System show delete/restrict guest page with input fields for search guest |
-| →         | 3 | Manager input guest's ID or Name to search the guest. |
-| ←         | 4 | System show list of guest's information to manager |
-| →         | 4 | Manager clicks a guest to look detail information |
-| ←         | 5 | System shows detail information about guest |
-| →         | 6 | Manager (a)click delete button on the guest |
-| ←         | 7 | System (b)show the message that the deletion is success |
+|           | 1 | Include Login (UC-1) |
+| →         | 2 | Manager clicks the 'delete/restrict guest' menu. |
+| ←         | 3 | System shows 'delete/restrict guest' page with an input field for searching guest. |
+| →         | 4 | Manager inputs (a) id or (b) name of a guest for searching. |
+| ←         | 5 | System (a) prepares a database query that best matches the actor's search input and (b) retrieves the records from the Database. |
+| →         | 6 | Database returns the matching records. |
+| ←         | 7 | System shows the list of guest information for each item with the 'delete' and 'restrict' buttons as a result of searching. |
+| →         | 8 | Manager clicks the 'delete' button beside the information of a guest. |
+| ←         | 9 | System verifies that the guest has no return issue. |
+| ←         | 10 | System prepares a database query that perfectly matches the information of guest to be deleted. |
+| →         | 11 | Database (a) removes the matching record using the query and (b) informs System of successful deletion. |
+| ←         | 12 | System shows Manager a message that the deletion is successful. |
 
 
 ## Flow of Events for Extensions (Alternate Scenarios)
-7a. The guest has not returned book yet
+9a. The guest has not returned book yet.
 | Direction | n | Actor Action                                                                                                         |
 | --------- | - | -------------------------------------------------------------------------------------------------------------------- |
-| ←         | 1 | System (a) detect error (b) show the message that the guest has not returned book yet.|
-| →         | 2 | Manager click the delete button despite the warning message, the guest will be deleted from the system. |
-|             | 3 | Same as Step 8 above |
+| ←         | 1 | System (a) detects error and (b) shows a message that the guest has not returned book yet. |
+| →         | 2 | Manager clicks the 'delete' button despite of the warning message.
+| ←         | 3 | System prepares database queries that perfectly match the information of guest to be deleted and the information of book the guest has not returned. |
+| →         | 4 | Database (a) removes the matching guest record using the query, (b) subtracts the quantity of book that has not been returned from the total quantity of the book, and informs System of successful deletion and update. |
+|           | 5 | System shows Manager a message that the deletion and update are successful. |
