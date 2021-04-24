@@ -2,7 +2,7 @@
 
 ## **Related Requirements**
 
- REQ-3, REQ-4, and REQ-5
+ REQ-03, REQ-04, and REQ-05
 
 ## **Initiating Actors**
 
@@ -10,35 +10,40 @@
 
 ## **Actor's Goal**
 
- To add book in library system
+ To add a book in library system
 
 ## **Participating Actors**
 
-X 
+Database 
 
 ## **Preconditions**
 
-- Manager click add book menu
+- Manager is logged in to the system and is shown the "Add Books" menu.
+- There is at least one book to add.
 
 ## **Postconditions**
 
-- The system should modify the quantity of book
+- Manager modifies the quantity of a book.
+- User looks up book information.
 
 
 ## Flow of Events for Main Success Scenario
-| Direction | n | Actor Action                                                                                                         |
-| --------- | - | -------------------------------------------------------------------------------------------------------------------- |
-|            | 1 | Include Login |
-| ←         | 2 | System show add book page with input fields for enter book information |
-| →         | 3 | Manager (a)input the information of book, such as a title, author, cover image, description, price, quantity, location in library, E-book file, and ID which is made automatically |
-| →         | 4 | Manager click add button |
-| ←         | 5 | System (b)show message that addition is success |
+| Direction | n | Actor Action                                                                                                                                           |
+|-----------|---|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+|           | 1 | Include Login (UC-1)                                                                                                                                   |
+| →         | 2 | Manager clicks the "Add Books" menu.                                                                                                                   |
+| ←         | 3 | System shows the page with input fields for adding a book.                                                                                             |
+| →         | 4 | Manager inputs the information of a book such as a title, author, cover image, description, price, quantity, location in the library, and E-book file. |
+| →         | 5 | Manager clicks "add" button.                                                                                                                           |
+| ←         | 6 | System prepares a database query that inserts book information(include ID which is made automatically) into the database.                              |
+| →         | 7 | Database returns about success.                                                                                                                        |
+| ←         | 8 | System shows a message about success.                                                                                                                  |
 
 
 ## Flow of Events for Extensions (Alternate Scenarios)
-3a. The book is already exist
-| Direction | n | Actor Action                                                                                                         |
-| --------- | - | -------------------------------------------------------------------------------------------------------------------- |
-| ←         | 1 | System (a) detect error, (b) alert with message that already the book is exist. |
-| →         | 2 | Manager input valid book information of book, such as a title, author, cover image, description, price, quantity, location in library, E-book file, and ID which is made automatically |
-|             | 3 | Same as int Step 4 above |
+7a. The book already exists.
+| Direction | n | Actor Action                                               |
+|-----------|---|------------------------------------------------------------|
+| →         | 1 | Database returns a record that book already exists.        |
+| ←         | 2 | System alerts with a message that the book already exists. |
+|           | 3 | Same as in Step 4 above.                                   |
