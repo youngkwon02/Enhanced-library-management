@@ -24,7 +24,7 @@ Database
 
 ## **Postconditions**
 
-- Actor reads E-book which his or her issues.
+- Actor can read E-book which his or her issues.
 - Actor can see the issued E-books at check issue info menu.
 - Database has updated the data of E-book issue.
 
@@ -36,3 +36,4 @@ Database
 | →         | 2   | Actor clicks a issue button if a book is available for reading as E-book.                              |
 | ←         | 3   | System prepares a database query that add the E-book to actor's issue list on database and execute it. |
 | →         | 4   | Database returns the result of saving.                                                                 |
+| ←         | 5   | System shows the result of issuing to Actor.                                                           |
