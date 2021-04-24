@@ -29,8 +29,8 @@ Guest, Database
 ## Flow of Events for Main Success Scenario
 | Direction | n | Actor Action                                                                                                         |
 | --------- | - | -------------------------------------------------------------------------------------------------------------------- |
-|           | 1 | Include Login |
-| →         | 2 | System shows input fields for searching Guest's information |
+|           | 1 | Include Login. |
+| →         | 2 | System shows input fields for searching Guest's information. |
 | ←         | 3 | System shows input fields for searching Guest's information. |
 | →         | 4 | Manager searches for a guest with a name or ID.|
 | ←         | 5 | System prepares a database query of guests that best matches with the Manager’s search criteria. |
@@ -47,7 +47,7 @@ Guest, Database
 | →         | 16 | Manager selects the books which guest wants to issue from the matched books list. |
 | ←         | 17 | System adds the selected books to issuing list and provides it as separate window to manager. |
 | →         | 18 | Manager clicks a 'Issue' button.|
-| ←         | 19 | System (a)confirms the paperbook issue request and (b) stores in the Database|
+| ←         | 19 | System (a)confirms the paperbook issue request and (b) stores in the Database.|
 
 ## Flow of Events for Main Success Scenario
 | Direction | n | Actor Action                                                                                                         |
