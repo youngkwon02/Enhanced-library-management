@@ -31,7 +31,7 @@ Database
 |           | 1   | Include Login                                                                                                                                                                                     |
 | ←         | 2   | System shows the list of all books and search bar for searching books with criteria section which can be book title or author.                                                                    |
 | →         | 3   | Actor enter book's title or book's author on the search bar.                                                                                                                                      |
-| ←         | 4   | System Prepares a database query that best matches the actor's search criteria and retrieves the records from the Database.                                                                       |
+| ←         | 4   | System prepares a database query that best matches the actor's search criteria and retrieves the records from the Database.                                                                       |
 | →         | 5   | Database returns the matching records.                                                                                                                                                            |
 | ←         | 6   | System (a)renders result page by returned records and (b)shows the list of books as a result of searching.                                                                                        |
 | →         | 7   | Actor may (a)change the order of listed books based on dictionary order of title, author, or publication date and (b)select search filters such as genre, range of price for which books to view. |
