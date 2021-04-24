@@ -14,7 +14,7 @@ To reply feedback for guest
 
 ## **Participating Actors**
 
-none
+Database
 
 ## **Preconditions**
 
@@ -37,9 +37,11 @@ none
 | --------- | - | -------------------------------------------------------------------------------------------------------------------- |
 |           | 1 | Include Check Feedback (Manager) (UC-18) |
 | →         | 2 | Guest selects the menu "View Feedback". |
-| ←         | 3 | System displays the feedback of the responsible guests. |
+| ←         | 3 | System displays the feedback of the each guests. |
 | →         | 4 | Manager selects specific feedback from the responsible guest to reply to. |
 | ←         | 5 | System displays a block for writing feedback reply. |
 | →         | 6 | Manager writes reply of feedback in the block. |
 | →         | 7 | Manager clicks a reply button. |
-| ←         | 8 | System displays the reply of feedback which his or her writes just before. |
+| ←         | 8 | System prepares a database query for saving the new reply to the Database. |
+| →         | 9 | Database (a) creates a new record using the new reply and (b) informs System of success operation. |
+| ←         | 10 | System displays the reply of feedback which his or her writes just before. |
