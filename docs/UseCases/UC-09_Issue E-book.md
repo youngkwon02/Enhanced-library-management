@@ -25,8 +25,8 @@ Database
 ## **Postconditions**
 
 - Actor reads E-book which his or her issues.
-- Actor can see the issued books at check issue info menu.
-- Database has updated the data of e-book issue.
+- Actor can see the issued E-books at check issue info menu.
+- Database has updated the data of E-book issue.
 
 ## Flow of Events for Main Success Scenario
 
@@ -34,5 +34,5 @@ Database
 | --------- | --- | ------------------------------------------------------------------------------------------------------ |
 |           | 1   | Include Check Book Info (UC-8)                                                                         |
 | →         | 2   | Actor clicks a issue button if a book is available for reading as E-book.                              |
-| ←         | 3   | System Prepares a database query that add the e-book to actor's issue list on database and execute it. |
+| ←         | 3   | System prepares a database query that add the E-book to actor's issue list on database and execute it. |
 | →         | 4   | Database returns the result of saving.                                                                 |
