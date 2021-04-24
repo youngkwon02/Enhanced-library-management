@@ -19,19 +19,21 @@
 | ------------ | ----------------------- | ---------------- |
 | Controller ↔ Page Maker | Controller passes requests to Page Maker and receives back pages prepared for displaying. | conveys requests |
 | Page Maker ↔ Interface Page | Page Maker prepares the Interface Page. | prepares |
+| Controller ↔ ID Generator | Controller passes a request for generating digit-ID to ID Generator. | conveys requests |
 | ID Generator ↔ Page Maker | ID generator passes a new ID to Page Maker to render it for display. | provides data |
 | Controller ↔ User Information | Controller generates User Information. | generates |
 | Controller ↔ Database Connection | Controller passes search request and add request to Database Connection. | conveys requests |
-| Add Request ↔ User Information | Add Request includes User Information. | includes |
+| User Information ↔ Search Request | User Information generates Search Request. | generates |
 | Database Connection ↔ Newcomer Checker | Database Connection passes a record that corresponds to a search request to Newcomer Checker. | provides data |
 | Newcomer Checker ↔ Page Maker | Newcomer Checker passes the information whether the guest is new or not to Page Maker to render it for display. | provides data |
 | Database Connection ↔ Page Maker | Database Connection passes the information whether the new record is created successfully to Page Maker. to render it for display. | provides data |
+
 
 ## Extracting the Attributes
 
 | Concept | Attributes | Attribute Description |
 | ------- | ---------- | --------------------- |
-| ID Generator | ID | automatically generated digits |
+| ID Generator | user ID | automatically generated digits |
 | User Information | user's data | name, generated ID, phone number, password, profile image, and e-mail |
 | Add Request | user's data | copied from user information |
 | Search Request | search parameters | name and phone number from user information |
