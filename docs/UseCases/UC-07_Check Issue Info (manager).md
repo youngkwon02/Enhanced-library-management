@@ -29,7 +29,7 @@ Database
 ## Flow of Events for Main Success Scenario
 | Direction | n | Actor Action                                                                                                         |
 | --------- | - | -------------------------------------------------------------------------------------------------------------------- |
-|           | 1 | Include Login (UC-1) |
+|           | 1 | Include Login (UC-1). |
 | ←         | 2 | System shows input fields for searching Guest's information. |
 | →         | 3 | Manager searches for a guest with a name or ID. |
 | ←         | 4 | System prepares a database query of guests that best matches with the Manager’s search criteria. |
