@@ -29,11 +29,12 @@ SMS Svc, Email Svc, Database, Guest
 
 ## Flow of Events for Main Success Scenario
 
-| Direction | n   | Actor Action                                                                                                       |
-| --------- | --- | ------------------------------------------------------------------------------------------------------------------ |
-| →         | 1   | Scheduler alerts the system that the system need to check about upcoming due.                                      |
-| ←         | 2   | System prepares a database query that gets all book and E-book issues and retrieves the records from the Database. |
-| →         | 3   | Database returns the matching records.                                                                             |
-| ←         | 4   | System (a)restricts overdue guest depending on overdue days and (b)gets return of E-book which is overdue.         |
-| ←         | 5   | System request that SMS Svc and Email SVC send the notifications to Guests who have upcoming due.                  |
-| →         | 6   | SMS Svc and Email Svc returns the result of sending notifications.                                                 |
+| Direction | n   | Actor Action                                                                                                                              |
+| --------- | --- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| →         | 1   | Scheduler alerts the system that the system need to check about overdue and upcoming due.                                                 |
+| ←         | 2   | System prepares a database query that gets all book and E-book issues and retrieves the records from the Database.                        |
+| →         | 3   | Database returns the matching records.                                                                                                    |
+| ←         | 4   | System prepares a database query that (a)restricts overdue guest depending on overdue days and (b)gets return of E-book which is overdue. |
+| →         | 5   | Database returns the result of query execution.                                                                                           |
+| ←         | 6   | System request that SMS Svc and Email SVC send the notifications to Guests who have upcoming due.                                         |
+| →         | 7   | SMS Svc and Email Svc returns the result of sending notifications.                                                                        |
