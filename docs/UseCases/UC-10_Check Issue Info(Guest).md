@@ -14,29 +14,29 @@ To check which book a guest has issued.
 
 ## **Participating Actors**
 
-X
+Database
 
 ## **Preconditions**
-
+- Guest logged in the system.
+- Guest can see 'check my issue' button on menu.
 ## **Postconditions**
 
 - Guest gets the information about the book issue of ownself.
 
 
 ## Flow of Events for Main Success Scenario
-| Direction | n | Actor Action                                                                                                         |
-| --------- | - | -------------------------------------------------------------------------------------------------------------------- |
-|           | 1 | Include Login(UC-1)|
-| →         | 2 | Guest clicks 'check my issue' button. |
-| ←         | 3 | System shows 'paper-book tab' and 'e-book tab' to guest. |
-| →         | 4 | If Guest clicks 'paper-book tab', |
-| ←         |   | System shows paper-book issue information of the guest, such as title, issue start date, due date, overdue state, and late fee to a guest. |
-| →         | 4-1 | If Guest clicks 'e-book tab', |
-| ←         |   | System shows e-book issue information of the guest, such as title, issue start date, and due date to a guest. |
+| Direction | n   | Actor Action                                                                                                                                                                                                                                                                                                                                |
+| --------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|           | 1   | Include Login(UC-1)                                                                                                                                                                                                                                                                                                                         |
+| →         | 2   | Guest clicks 'check my issue' button.                                                                                                                                                                                                                                                                                                       |
+| ←         | 3   | System shows 'paper-book tab' and 'e-book tab' to guest.                                                                                                                                                                                                                                                                                    |
+| →         | 4   | Guest clicks 'paper-book tab' or 'e-book tab'.                                                                                                                                                                                                                                                                                              |
+| ←         | 5   | System prepares a database query that matches the guest's paper book issue information or guest's e book issue information and retrieves the records from the Database.                                                                                                                                                                     |
+| →         | 6   | Database returns the matching records.                                                                                                                                                                                                                                                                                                      |
+| ←         | 7   | System renders the records for display and shows paper-book issue information of the guest, such as title, issue start date, due date, overdue state, late fee, and 'extend' button to a guest. For e-books, show the same issue information as paper book issue information, and additionally show the 'Read on Viewer' button to a guest. |
 
 ## Flow of Events for Extensions (Alternate Scenarios)
-2a. User inputs invalid ID and password in the blank.
-| Direction | n | Actor Action                                                                                                         |
-| --------- | - | -------------------------------------------------------------------------------------------------------------------- |
-|           | 4-1a | If book issue date exceeds returning period, |
-| ←         | 1 | System (a)return the exceeded period book and (b)delete that e-book's information at 'e-book tab'  |
+7a. Guest has overdue book.
+| Direction | n   | Actor Action                                                                                                                           |
+| --------- | --- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| ←         | 1   | System detect  that guest had restricted by overdue books, System shows paper-book issue information of guest without 'extend' button. |

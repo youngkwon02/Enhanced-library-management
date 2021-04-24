@@ -14,27 +14,23 @@ To extend a book's rental period.
 
 ## **Participating Actors**
 
-X
+Database
 
 ## **Preconditions**
 
-There should be at least one book in 'check Issue Information' menu.
+- Guest logged in system.
+- There should be at least one book in 'check Issue Information' menu.
+- Guest is watching 'Check Issue Info' page.
 
 ## **Postconditions**
 
-The modified rental period data is stored into database.
+- The modified rental period data is stored into database.
 
 ## Flow of Events for Main Success Scenario
-| Direction | n | Actor Action                                                                                                         |
-| --------- | - | -------------------------------------------------------------------------------------------------------------------- |
-|           | 1 | Include UC-10 (Check Issue Info(guest)) |
-| ←         | 2 | The system shows 'extend' buttons at each books. |
-| →         | 3 | Guest clicks 'extend' buttons per each books. |
-| ←         | 4 | System (a)alerts success message and (b)extend to predetermined length of period. |
-
-## Flow of Events for Extensions (Alternate Scenarios)
-2a. User inputs invalid ID and password in the blank.
-| Direction | n | Actor Action                                                                                                         |
-| --------- | - | -------------------------------------------------------------------------------------------------------------------- |
-|           | 2a | There is overdue book at 'paper-books tab' |
-| ←         | 1 | The system delete 'extend' buttons at overdue books. |
+| Direction | n   | Actor Action                                                                                                                                               |
+| --------- | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|           | 1   | Include UC-10 (Check Issue Info(guest))                                                                                                                    |
+| →         | 2   | Guest clicks 'extend' buttons per each books.                                                                                                              |
+| ←         | 3   | System prepares a database query that extends rental period of book and modifies the record from the Database.                                             |
+| →         | 4   | Database returns a message that the record has been modified.                                                                                              |
+| ←         | 5   | System alerts success message that  the rental period of the book has been extended by predetermined length of period and system disables 'extend' button. |
