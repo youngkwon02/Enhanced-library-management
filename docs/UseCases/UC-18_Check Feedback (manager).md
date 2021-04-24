@@ -31,7 +31,7 @@ Database
 | →         | 2 | Manager enters the ‘View Feedback’ menu. |
 | ←         | 3 | System shows a feedback list.  |
 | ←         | 4 | System prepares a database query to get the feedbacks from the Database. |
-| ←         | 5 | Database returns feedbacks |
+| →         | 5 | Database returns feedbacks |
 | ←         | 6 | System shows the list of feedbacks written by the guests. |
 
 ## Flow of Events for Extensions (Alternate Scenarios)
