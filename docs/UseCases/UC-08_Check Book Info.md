@@ -28,7 +28,7 @@ Database
 
 | Direction | n   | Actor Action                                                                                                                                                                                      |
 | --------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|           | 1   | Include Login                                                                                                                                                                                     |
+|           | 1   | Include Login (UC-01)                                                                                                                                                                             |
 | ←         | 2   | System shows the list of all books and search bar for searching books with criteria section which can be book title or author.                                                                    |
 | →         | 3   | Actor enter book's title or book's author on the search bar.                                                                                                                                      |
 | ←         | 4   | System prepares a database query that best matches the actor's search criteria and retrieves the records from the Database.                                                                       |
