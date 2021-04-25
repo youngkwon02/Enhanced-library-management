@@ -1,3 +1,5 @@
+# Domain Model for UC-03: Add book
+
 ## Extracting the Responsibilities
 | Responsibility Description | Type  | Concept Name                                                                                                       |
 | --------- | - | -------------------------------------------------------------------------------------------------------------------- |
