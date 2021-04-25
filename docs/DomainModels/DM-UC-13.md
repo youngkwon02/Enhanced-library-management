@@ -42,4 +42,4 @@
 | Restrict Request      | guest's ID               | guest's ID which is the ID of guest who will be restricted        |
 | E-book Return Request | guest's ID               | guest's ID which is the ID of guest who have overdue E-book issue |
 | E-book Return Request | issue's ID               | issue's ID which is the ID of overdue issue                       |
-| Archiver              | Post Processing Criteria | current date for judging overdue of upcoming due                  |
+| Postprocessor         | Post Processing Criteria | current date for judging overdue of upcoming due                  |
