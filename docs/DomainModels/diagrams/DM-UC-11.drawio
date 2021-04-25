@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-04-25T03:51:43.278Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Whale/2.9.116.15 Safari/537.36" etag="kkw7ZqK8kL7j_QT0voJn" version="14.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-25T04:13:33.517Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Whale/2.9.116.15 Safari/537.36" etag="Fp76eONoA2A58AJAwZdZ" version="14.6.6" type="github">
   <diagram id="mtXusVuRq8ULlgbZbmsT" name="Page-1">
-    <mxGraphModel dx="1662" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="700" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -89,7 +89,7 @@
           <mxGeometry x="130" y="345" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="bcshMdE293iyDVxzeFrG-32" value="E Book ID" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="110" y="240" width="80" height="20" as="geometry" />
+          <mxGeometry x="110" y="230" width="80" height="20" as="geometry" />
         </mxCell>
         <mxCell id="bcshMdE293iyDVxzeFrG-33" value="Click Request" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="110" y="200" width="80" height="20" as="geometry" />
@@ -235,6 +235,9 @@
         </mxCell>
         <mxCell id="udYR9ekKEHqNirX7fmIo-15" value="" style="triangle;whiteSpace=wrap;html=1;fillColor=#000000;direction=south;" vertex="1" parent="1">
           <mxGeometry x="745" y="460" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="udYR9ekKEHqNirX7fmIo-16" value="Guest ID" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="250" width="80" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
