@@ -2,7 +2,7 @@
 
 ## **Related Requirements**
 
-Req36, Req37, Req44
+Req36, Req37
 
 ## **Initiating Actors**
 
