@@ -7,7 +7,8 @@
 |Render the archiving result into an HTML document for sending to actor's Web browser for display. | D   | Page Maker |
 |HTML document that shows the actor the current context, what actions can be done, and outcomes of previous actions. | K   | Interface Page |
 |Retrieve records from the database or create a new record at the database. | D   | Database Connection |
-|Form specifying the parameters for database retrieval.| K   | Feedback Request|                                           |Form specifying the parameters for database update.| K   | Reply Request|           
+|Form specifying the parameters for database retrieval.| K  | Feedback Request |
+|Form specifying the parameters for database update.| K   | Reply Request|           
 
 
 ## Extracting the Associations
