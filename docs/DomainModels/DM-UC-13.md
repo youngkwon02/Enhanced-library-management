@@ -9,7 +9,7 @@
 | Prepare a database query that retrieve all the records about book issues from the database.           | D    | Database Connection   |
 | Filter the retrieved records to match the criteria of overdue.                                        | D    | Postprocessor         |
 | Update the Restrict Request in the database.                                                          | D    | Archiver              |
-| Data of guests' information for storing restriction of guests.                                        | K    | Restrict Request      |
+| Form specifying the restrict parameters for database record update.                                   | K    | Restrict Request      |
 | Data of E-books' information to be removed from the guest's E-book issue list.                        | K    | E-book Return Request |
 | Contents of notification that includes the information of upcoming due of book issue.                 | K    | Notification Contents |
 | Make Notification Contents and convey to Actors.                                                      | D    | Notification Builder  |
@@ -39,7 +39,7 @@
 | Notification Contents | issue period             | period of issue whose due is upcoming                             |
 | Notification Contents | guest's phone number     | guest's phone number where the notification to be sent            |
 | Notification Contents | guest's e-mail           | guest's email where the notification to be sent                   |
-| Restrict Request      | guest's ID               | guest's ID which is the ID of guest who will be restricted        |
+| Restrict Request      | update parameters        | guest's id, restriction state, and restricted period              |
 | E-book Return Request | guest's ID               | guest's ID which is the ID of guest who have overdue E-book issue |
 | E-book Return Request | issue's ID               | issue's ID which is the ID of overdue issue                       |
 | Postprocessor         | Post Processing Criteria | current date for judging overdue of upcoming due                  |
