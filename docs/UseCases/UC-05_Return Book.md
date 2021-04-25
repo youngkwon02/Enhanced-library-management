@@ -10,16 +10,16 @@ Manager
 
 ## **Actor's Goal**
 
-To return book issued by a guest to the library
+To return books issued by a guest to the library
 
 ## **Participating Actors**
 
-X
+Database, Guest
 
 ## **Preconditions**
 
-- A guest has issued at least a book.
-- A guest brings at least a book to return to the library.
+- Manager is logged in to the system and is shown a "Book Return" tab at the "Calculate Fine" menu.
+- Guest brings at least a book to return to the library.
 
 ## **Postconditions**
 
@@ -28,11 +28,12 @@ X
 - If the guest is not restricted, the guest can issue more books as many as the number of returned books.
 
 ## Flow of Events for Main Success Scenario
-| Direction | n | Actor Action                                                                                                         |
-| --------- | - | -------------------------------------------------------------------------------------------------------------------- |
-|           | 1 | Include Login (UC-1) |
-| →         | 2 | Manager enters the ‘Book Return’ tab at the ‘Calculate Fine’ menu. |
-|           | 3 | Include CheckIssueInfo (UC-4) |
-| →         | 4 | Manager clicks the ‘add’ button to add books to the returning book list. |
+| Direction | n | Actor Action                                                                                             |
+|-----------|---|----------------------------------------------------------------------------------------------------------|
+|           | 1 | Include Login (UC-1)                                                                                     |
+| →         | 2 | Manager clicks the ‘Book Return’ tab at the ‘Calculate Fine’ menu.                                       |
+|           | 3 | Include Check Issue Info (UC-4)                                                                          |
+| →         | 4 | Manager clicks the ‘add’ button to add books to the returning book list.                                 |
 | →         | 5 | Manager checks the total late fee of the books from the returning book list and charges it to the guest. |
-| →         | 6 | Manager clicks the ‘Return’ button to complete the return process. |
+| →         | 6 | Manager clicks the ‘return’ button to complete the return process.                                       |
+| ←         | 7 | System prepares a database query that changes the returning state of books.                              |
