@@ -18,8 +18,8 @@
 | Page Maker | ⬌   | Interpace Page      | Page Maker prepares the Interface Page.                                                    | prepares         |
 
 ## Extracting the Attributes
-| Concept             | Attributes             | Attribute Description                              |
-| ------------------- | ---------------------- | -------------------------------------------------- |
-| Page Maker          | extended rental period | Make updated page with extended rental period.     |
-| Database Connection | extend rental period   | Extend the rental period stored in the database.   |
-| Click Request       | book id                | Used to determine which book actor want to extend. |
+| Concept       | Attributes     | Attribute Description                                         |
+| ------------- | -------------- | ------------------------------------------------------------- |
+| Page Maker    | requestResults | Make updated page with extended rental period.                |
+| Click Request | userIdentity   | userIdentity to use to query issue information from database. |
+| Click Request | book ID        | Used to determine which book actor want to extend.            |

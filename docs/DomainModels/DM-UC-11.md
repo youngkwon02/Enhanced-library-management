@@ -7,7 +7,7 @@
 | HTML document that shows the actor the current context, what actions can be done, and outcomes of previous actions. | K    | Interface Page      |
 | Render the retrived records into an HTML document for sending to actor's Web browser for display.                   | D    | Page Maker          |
 | Prepare a database query that get the actor's login information from the database.                                  | D    | Database Connection |
-| Show e book content on e book viewer.                                                                               | D    | Viewer              |
+| Show e book content on e book viewer.                                                                               | D    | Viewer Connection   |
 | Used to determine which e book actor want to view.                                                                  | K    | Click Request       |
 
 ## Extracting the Associations
@@ -17,11 +17,11 @@
 | Controller          | ⬌   | Database Connection | Controller passes  click request generated from the interface page to Database Connection. | conveys requests |
 | Page Maker          | ⬌   | Database Connection | Database Connection passes the retrieved data to Page Maker to render them for display.    | provide data     |
 | Page Maker          | ⬌   | Interpace Page      | Page Maker prepares the Interface Page.                                                    | prepares         |
-| Database Connection | ⬌   | Viewer              | The viewer shows the contents of the e book provided by the database.                      | provide data     |
+| Database Connection | ⬌   | Viewer Connection   | Viewer receives content from DB connection.                                                | provide data     |
 
 ## Extracting the Attributes
-| Concept             | Attributes            | Attribute Description                              |
-| ------------------- | --------------------- | -------------------------------------------------- |
-| Viewer              | E book content viewer | Show e book content to guest.                      |
-| Database Connection | E book content        | Provide e book content to Viewer.                  |
-| Click Request       | E book id             | Used to determine which e book actor want to view. |
+| Concept            | Attributes     | Attribute Description                                         |
+| ------------------ | -------------- | ------------------------------------------------------------- |
+| Viewer  Connection | E book content | E book content passed to guest.                               |
+| Click Request      | userIdentity   | userIdentity to use to query issue information from database. |
+| Click Request      | E book ID      | Used to determine which e book actor want to view.            |

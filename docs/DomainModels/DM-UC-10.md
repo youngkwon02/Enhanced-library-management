@@ -18,7 +18,8 @@
 | Page Maker | ⬌   | Interpace Page      | Page Maker prepares the Interface Page.                                                    | prepares         |
 
 ## Extracting the Attributes
-| Concept             | Attributes  | Attribute Description                                                |
-| ------------------- | ----------- | -------------------------------------------------------------------- |
-| Database Connection | record list | Provide issue information data to Page Maker.                        |
-| Click Tap Request   | tab name    | Used to determine which book's issue information actor want to view. |
+| Concept           | Attributes     | Attribute Description                                                |
+| ----------------- | -------------- | -------------------------------------------------------------------- |
+| Page Maker        | requestResults | Make check issue page with issue  book list.                         |
+| Click Tap Request | tab name       | Used to determine which book's issue information actor want to view. |
+| Click Tap Request | userIdentity   | userIdentity to use to query issue information from database.        |
