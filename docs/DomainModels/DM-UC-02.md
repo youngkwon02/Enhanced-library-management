@@ -13,4 +13,5 @@
 |  Concept1  | _ | Concept2 | Association Description | Association name |
 |-----|-----|-----|-----|-----|
 | Controller  | ⬌ | Page Maker  | Controller passes requests to Page Maker and receives back pages prepared for displaying. | conveys requests|
+| Controller  | ⬌ | Logout Reqeust | Controller receives a logout request. | receives |
 | Page Maker  | ⬌ | Interface Page | Page Maker prepares the Interface Page. | prepares |
