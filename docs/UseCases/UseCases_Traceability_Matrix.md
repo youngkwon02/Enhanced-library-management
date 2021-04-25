@@ -1,6 +1,7 @@
 # Traceability Matrix bewteen REQ and Use Case
 
-> NF requirement is not considered, scroll horizontally with holding shift and scrolling.
+> NF requirement is not considered, scroll horizontally with holding shift and scrolling.  
+> You can see your traceability matrix with google spreadsheet also at [here](https://docs.google.com/spreadsheets/d/1anLk63DemLYgJA6KBVp6kMiilNr_3i5mWT_hrE6vkMU/edit?usp=sharing)!
 
 | REQ/UC | Login | Logout | Add Book | Issue Paper Book | Return Book | Check Issue Info(Manager) | Check Issue Info(Guest) | Manage Overdue Guest | Check Book Info | Issue E-book | E-book Reading | Extend Issue Period | Check Guest Info | Add Guest | Restrict Guest | Delete Guest | Check Feedback(manager) | Check Feedback(Guest) | Send Feedback | Reply Feedback | Automated Due Management | Count |
 | ------ | ----- | ------ | -------- | ---------------- | ----------- | ------------------------- | ----------------------- | -------------------- | --------------- | ------------ | -------------- | ------------------- | ---------------- | --------- | -------------- | ------------ | ----------------------- | --------------------- | ------------- | -------------- | ------------------------ | ----- |
