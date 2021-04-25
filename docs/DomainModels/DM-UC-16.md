@@ -1,4 +1,5 @@
 # Domain Model for UC-16: Restrict Guest
+
 ## Extracting the Responsibilities
 
 | Responsibility Description | Type | Concept Name |
@@ -13,19 +14,21 @@
 
 ## Extracting the Associations
 
-| Concept Pair | Association Description | Association Name |
-| ------------ | ----------------------- | ---------------- |
-| Controller ↔ Page Maker | Controller passes requests to Page Maker and receives back pages prepared for displaying | conveys requests |
-| Page Maker ↔ Database Connection | Database Connection passes the retrieved data to Page Maker to render them for display | provides data |
-| Page Maker ↔ Interface Page | Page Maker prepares the Interface Page | prepares |
-| Controller ↔ Database Connection | Controller passes search request and restrict request to Database Connection | conveys requests |
+| Concept 1           |    | Concept 2           | Association Description | Association Name |
+| ------------------- | -- | ------------------- | ----------------------- | ---------------- |
+| Controller          | ⬌ | Page Maker          | Controller passes requests to Page Maker and receives back pages prepared for displaying. | conveys requests |
+| Page Maker          | ⬌ | Interface Page      | Page Maker prepares the Interface Page. | prepares |
+| Controller          | ⬌ | Interface Page      | Controller posts Interface Page to actor's Web browser. | posts |
+| Controller          | ⬌ | Search Request      | Controller receives Search Request. | receives |
+| Controller          | ⬌ | Restrict Request    | Controller receives Restrict Request. | receives |
+| Controller          | ⬌ | Database Connection | Controller passes search request and restrict request to Database Connection. | conveys requests |
+| Database Connection | ⬌ | Page Maker          | Database Connection passes the retrieved guest data to Page Maker to render them for display. | provides data |
 
 
 ## Extracting the Attributes
 
 | Concept | Attributes | Attribute Description |
 | ------- | ---------- | --------------------- |
-| Search Request | user's identity | Used to determine the actor's credentials, which is in turn specify what kind of data this actor is authorized to view and update. |
 | Search Request | search parameters | guest's id or name |
 | Restrict Request | update parameters | guest's id, restriction state, and restricted period |
 | Page Maker | search parameters | Copied from search request; needed to filter the retrieved records to match the actor's search criteria. |
