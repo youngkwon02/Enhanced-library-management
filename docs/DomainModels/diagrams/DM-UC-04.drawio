@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-25T06:47:25.192Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36" etag="qg2FflqgtQz6KhIqFaYV" version="14.6.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-25T06:57:15.443Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36" etag="jhW2HLDru0Q5l0r9C4FV" version="14.6.0" type="github">
   <diagram id="5l0Z7yfl8ByQtcLtXI0_" name="Page-1">
     <mxGraphModel dx="1673" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="700" pageHeight="1000" math="0" shadow="0">
       <root>
@@ -51,7 +51,7 @@
         <mxCell id="XmLIVMyjwb1xh4FuUnke-63" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="1430" y="231.5" width="194" height="189" as="geometry" />
         </mxCell>
-        <mxCell id="XmLIVMyjwb1xh4FuUnke-49" value="《boundary》&#xa;Issue Request" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=79;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=18;" parent="XmLIVMyjwb1xh4FuUnke-63" vertex="1">
+        <mxCell id="XmLIVMyjwb1xh4FuUnke-49" value="《boundary》&#xa;Paper-book&#xa;Issue Request" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=79;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=18;" parent="XmLIVMyjwb1xh4FuUnke-63" vertex="1">
           <mxGeometry x="14" y="17" width="180" height="203" as="geometry" />
         </mxCell>
         <mxCell id="XmLIVMyjwb1xh4FuUnke-50" value="guest&#39;s id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" parent="XmLIVMyjwb1xh4FuUnke-49" vertex="1">
