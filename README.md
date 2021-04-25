@@ -9,9 +9,6 @@ Enhanced Library Management System for Software Engineering Class
 You can see the documentations of this project [here](https://github.com/2021-caucse-software-engineering/enhanced-library-management/tree/main/docs)  
 
 
-## License
-MIT License
-
 
 ## Our Team Members
 
@@ -40,3 +37,8 @@ MIT License
 | User Management         | 김영권, 서율아 |
 | Book System for Guest   | 문법식, 임동영 |
 | Book System for Manager | 박준수, 조원희 |
+
+
+## License
+MIT License
+
