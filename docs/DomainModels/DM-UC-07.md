@@ -1,3 +1,5 @@
+# Domain Model for UC-07: Check issue information (Manager)
+
 ## Extracting the Responsibilities
 | Responsibility Description | Type  | Concept Name                                                                                                       |
 | --------- | - | -------------------------------------------------------------------------------------------------------------------- |
