@@ -1,7 +1,7 @@
 # Use Case: Issue Paper-Book
 ## **Related Requirements**
 
-Req-06, Req-07, Req-08, Req-09, Req-10,Req-11, Req-12, Req-13, Req-14, Req-15, Req-21
+Req-06, Req-07, Req-08, Req-09, Req-10,Req-11, Req-12, Req-13, Req-14, Req-15
 
 ## **Initiating Actors**
 
