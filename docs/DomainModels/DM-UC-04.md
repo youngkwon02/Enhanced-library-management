@@ -1,3 +1,4 @@
+# Domain Model for UC-04: Issue Paper Book
 
 ## Extracting the Responsibilities
 | Responsibility Description | Type  | Concept Name                                                                                                       |
