@@ -14,7 +14,7 @@
 |  Concept1  | _ | Concept2 | Association Description | Association name |
 |-----|-----|-----|-----|-----|
 | Controller  | ⬌ | Page Maker  | Controller passes requests to Page Maker and receives back pages prepared for displaying.  | conveys requests  |
-| Controller  | ⬌ | Feedback Update Request  | Controller receives Feedback Update Request| conveys requests  |
+| Controller  | ⬌ | Feedback Update Request  | Controller receives Feedback Update Request| receives  |
 | Page Maker  | ⬌ | Interface Page | Page Maker prepares the Interface Page.  |  prepares |
 | Controller | ⬌  | Database Connection  | Controller passes feedback update request to Database Connection. | conveys requests |
 | Database Connection  | ⬌  | Page Maker | Database Connection passes whether a record is created properly or not to Page Maker. | provides data |
