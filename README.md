@@ -13,9 +13,7 @@ You can see the documentations of this project [here](https://github.com/2021-ca
 MIT License
 
 
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+## Our Team Members
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -36,4 +34,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+## Sub Group
+| Sub group               | Members        |
+|-------------------------|----------------|
+| User Management         | 김영권, 서율아 |
+| Book System for Guest   | 문법식, 임동영 |
+| Book System for Manager | 박준수, 조원희 |
