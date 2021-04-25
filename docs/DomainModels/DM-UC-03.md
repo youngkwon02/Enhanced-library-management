@@ -17,7 +17,7 @@
 | Controller | ⬌ | Archiver | Controller passes requests to Archiver.  | conveys requests |
 | Controller | ⬌ | Request Checker | Controller conveys request to Request Checker | conveys requests |
 | Book Add Request | ⬌ | Controller | Controller receives book add requests. | receives |
-| Request Checker | ⬌ | DB Connect | Request Checker checks the database for whether the new id of the request already exists. | receives |
+| Request Checker | ⬌ | DB Connect | Request Checker checks the database for whether the new id of the request already exists. | conveys requests |
 | Archiver | ⬌ | DB Connect | Archiver generates id and stores information of the 'book add request' into the database. | saves data |
 | Page Maker | ⬌ | Interface Page | Page Maker prepares the Interface Page. | prepares |
 | Local Connection | ⬌ | Book Add Request | Local Connection provides a book cover image and E-book file to Book Add Request. | provides data |
