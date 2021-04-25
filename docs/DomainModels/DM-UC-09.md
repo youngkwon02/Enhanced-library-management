@@ -21,7 +21,7 @@
 | Page Maker | ⬌   | Interpace Page           | Page Maker prepares the Interface Page.                                                                         | prepares         |
 | Controller | ⬌   | Archiver                 | Controller passes issue requests to Archiver to process issue requests and store issue information to database. | conveys requests |
 | Archiver   | ⬌   | E-book issue Information | Archiver generates E-book issue Information.                                                                    | generates        |
-| Archiver   | ⬌   | Database Connection      | Archiver requests Database Connection to store E-book issue Information into the database.                      | provide data     |
+| Archiver   | ⬌   | Database Connection      | Archiver requests Database Connection to store E-book issue Information into the database.                      | requests save    |
 
 ## Extracting the Attributes
 
