@@ -32,7 +32,7 @@ Database, Guest
 |-----------|---|----------------------------------------------------------------------------------------------------------|
 |           | 1 | Include Login (UC-1)                                                                                     |
 | →         | 2 | Manager clicks the ‘Book Return’ tab at the ‘Calculate Fine’ menu.                                       |
-|           | 3 | Include Check Issue Info (UC-4)                                                                          |
+|           | 3 | Include Check Issue Info (UC-7)                                                                          |
 | →         | 4 | Manager clicks the ‘add’ button to add books to the returning book list.                                 |
 | →         | 5 | Manager checks the total late fee of the books from the returning book list and charges it to the guest. |
 | →         | 6 | Manager clicks the ‘return’ button to complete the return process.                                       |
