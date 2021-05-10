@@ -1,0 +1,1 @@
+create Sequence Diagram folder
