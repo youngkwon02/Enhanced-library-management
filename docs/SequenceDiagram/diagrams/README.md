@@ -1,1 +1,1 @@
-# SequenceDiagram draw.io files
+# Sequence Diagram draw.io files
