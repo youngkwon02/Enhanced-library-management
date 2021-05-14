@@ -18,5 +18,5 @@
 ## The reason for not choosing V1
 
 - Database Connection의 Responsibilty는 Database에 새로운 정보를 기록하는 것이다.<br>
-  V1에서는 Database Connection이 Controller로 부터 Save Feedback Request를 전달받으면 직접 ID Generator로부터 새로운 Feedback ID를 발급받아 Database에 Recording한다.<br>
+  V1에서는 Database Connection이 Controller로 부터 Save Feedback Request를 전달받으면 직접 ID Generator로부터 새로운 Feedback ID를 발급받아 Database에 Recording한다.<br>
   위의 Variation으로 구현할 경우, Controller의 point에서는 Save Feedback Request에 대한 단 한번의 요청만이 요구되지만, Database Connection이 본래의 역할인 DB Recording을 제외한 새로운 책임을 가지게 되므로 해당 Variation을 체택하지 않았다.
