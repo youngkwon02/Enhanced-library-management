@@ -1,4 +1,4 @@
-해당 Sequence diagram은 'Search Guest' Sequence diagram을 참조함
+해당 Sequence diagram은 'Search Guest' Sequence diagram을 참조하는데, 이 두 sequence diagram은 responsibility를 명명하는 데에 차이가 있다. 이는 'Search Guest' sequence diagram은 Java로 구현을 진행할 sub group에서 제작했고, UC-15에 대응되는 해당 sequence diagram은 Python으로 구현을 진행할 sub group에서 제작했기 때문이다. 이에 'Search Guest' diagram의 controller와 view controller가 해당 sequence diagram에서는 controller로 통합되었다.
 
 ## Responsibility
 
