@@ -1,6 +1,6 @@
 ## Responsibility
 
-- AddBooks View : 처음 Add Book Menu로 진입하면 띄워주는 배경 컴포넌트.
+- AddBooks View : 처음 Add Book Menu로 진입하면 띄워주는 view 컴포넌트. 여러 개의 input parameter로 이루어져 있다.ㅌ
 - View Controller : 어떤 컴포넌트를 화면에 표시할지 제어하는 컨트롤러 컴포넌트이다. 요청에 대한 응답을 처리하여 어떤 정보를 화면에 표시할지 선택하고, 렌더링한다.
 - Controller : back-end responsibility들의 actions을 조정하고 다른 responsibility로 작업을 전달한다.
 - Local File Connection : 사용자의 디바이스에 접근해 파일을 받아온다.
