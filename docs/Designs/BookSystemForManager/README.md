@@ -1,0 +1,6 @@
+# Designs about Book System For Manager
+
+You can see our design documentations about Book System For Manager here.
+
+- In [SequenceDiagram directory](./SequenceDiagram), you can see our sequence diagram documents.
+- In [ClassDiagram directory](./ClassDiagram), you can see our class diagram documents.
