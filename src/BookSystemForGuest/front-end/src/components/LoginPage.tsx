@@ -9,13 +9,12 @@ import {
   InputLeftElement,
   chakra,
   Box,
-  Link,
   Avatar,
   FormControl,
-  FormHelperText,
   InputRightElement,
 } from '@chakra-ui/react';
 import { FaUserAlt, FaLock } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
@@ -77,15 +76,17 @@ const LoginPage = () => {
                   </InputRightElement>
                 </InputGroup>
               </FormControl>
-              <Button
-                borderRadius={0}
-                type="submit"
-                variant="solid"
-                colorScheme="teal"
-                width="full"
-              >
-                Login
-              </Button>
+              <Link to="/book-info">
+                <Button
+                  borderRadius={0}
+                  type="submit"
+                  variant="solid"
+                  colorScheme="teal"
+                  width="full"
+                >
+                  Log In
+                </Button>
+              </Link>
             </Stack>
           </form>
         </Box>
