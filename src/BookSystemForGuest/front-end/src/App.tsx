@@ -1,10 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Redirect, Route, Switch } from 'react-router-dom';
-import './App.css';
-import LoginPage from './components/LoginPage';
-import BookInfoPage from './components/BookInfoPage';
-import { useState } from 'react';
+import React from "react";
+import logo from "./logo.svg";
+import { Redirect, Route, Switch } from "react-router-dom";
+import "./App.css";
+import LoginPage from "./components/LoginPage";
+import BookInfoPage from "./components/BookInfoPage";
+import { useState } from "react";
+import CheckIssuePage from "./components/CheckIssuePage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         </Route>
         <Route path="/login" exact={true} component={LoginPage} />
         <Route path="/book-info" component={BookInfoPage} />
+        <Route path="/check-issue" component={CheckIssuePage} />
         <Route
           // path 를 따로 정의하지 않으면 모든 상황에 렌더링됨
           render={({ location }) => (

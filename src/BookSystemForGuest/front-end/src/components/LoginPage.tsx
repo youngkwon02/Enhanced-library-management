@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Flex,
   Heading,
@@ -12,9 +12,9 @@ import {
   Avatar,
   FormControl,
   InputRightElement,
-} from '@chakra-ui/react';
-import { FaUserAlt, FaLock } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+} from "@chakra-ui/react";
+import { FaUserAlt, FaLock } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
@@ -41,7 +41,7 @@ const LoginPage = () => {
       >
         <Avatar bg="teal.500" />
         <Heading color="teal.400">Welcome</Heading>
-        <Box minW={{ base: '90%', md: '468px' }}>
+        <Box minW={{ base: "90%", md: "468px" }}>
           <form>
             <Stack
               spacing={4}
@@ -66,12 +66,12 @@ const LoginPage = () => {
                     children={<CFaLock color="gray.300" />}
                   />
                   <Input
-                    type={showPassword ? 'text' : 'password'}
+                    type={showPassword ? "text" : "password"}
                     placeholder="Password"
                   />
                   <InputRightElement width="4.5rem">
                     <Button h="1.75rem" size="sm" onClick={handleShowClick}>
-                      {showPassword ? 'Hide' : 'Show'}
+                      {showPassword ? "Hide" : "Show"}
                     </Button>
                   </InputRightElement>
                 </InputGroup>
