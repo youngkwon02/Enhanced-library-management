@@ -29,7 +29,7 @@ const DetailInfoModal = ({
     <Modal isOpen={isOpen} onClose={onClose} isCentered>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Modal Title</ModalHeader>
+        <ModalHeader>Detailed Book Info</ModalHeader>
         <ModalCloseButton />
         <ModalBody>{modalBody}</ModalBody>
 
