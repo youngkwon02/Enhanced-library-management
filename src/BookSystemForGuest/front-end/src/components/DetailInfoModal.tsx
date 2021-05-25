@@ -14,7 +14,7 @@ type DetailInfoModalProps = {
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
-  modalBody: string;
+  children: React.ReactElement;
   eBookAvailable: boolean;
 };
 
@@ -22,16 +22,22 @@ const DetailInfoModal = ({
   isOpen,
   onOpen,
   onClose,
-  modalBody,
+  children,
   eBookAvailable,
 }: DetailInfoModalProps) => {
   return (
-    <Modal isOpen={isOpen} onClose={onClose} isCentered>
+    <Modal
+      isOpen={isOpen}
+      onClose={onClose}
+      isCentered
+      scrollBehavior="outside"
+      size="3xl"
+    >
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>Detailed Book Info</ModalHeader>
         <ModalCloseButton />
-        <ModalBody>{modalBody}</ModalBody>
+        <ModalBody>{children}</ModalBody>
 
         <ModalFooter>
           {eBookAvailable && <Button mr={3}>Issue E-Book</Button>}
