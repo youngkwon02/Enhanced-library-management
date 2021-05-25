@@ -8,7 +8,7 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <Flex>
+    <Flex height="100vh">
       <Navigation />
       {children}
     </Flex>

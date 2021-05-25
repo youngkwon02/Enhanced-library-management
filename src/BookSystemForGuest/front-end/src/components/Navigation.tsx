@@ -1,18 +1,13 @@
+import { Stack } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/book-info">Book Info</Link>
-        </li>
-        <li>
-          <Link to="/check-issue">Check Issue Info</Link>
-        </li>
-      </ul>
-    </nav>
+    <Stack align="center" justify="center">
+      <Link to="/book-info">Book Info</Link>
+      <Link to="/check-issue">Check Issue Info</Link>
+    </Stack>
   );
 };
 
