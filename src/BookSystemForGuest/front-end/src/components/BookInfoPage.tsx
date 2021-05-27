@@ -6,15 +6,15 @@ import BookItem, { BookItemProps } from "./BookItem";
 import Layout from "./Layout";
 import { useAsync } from "react-async";
 import axios from "axios";
+import { getBookList } from "../lib/api";
 
 const onSearch = () => {
   console.log("Search Clicked");
 };
 
-const getBookList = async () => {
-  const response = await axios.get(`http://localhost:3300/books`);
-  return response.data;
-};
+// TODO: make parameter to getBookList
+
+// TODO: make post request for e book issuing
 
 const BookInfoPage = () => {
   const { data, error, isLoading } = useAsync<BookItemProps[]>({

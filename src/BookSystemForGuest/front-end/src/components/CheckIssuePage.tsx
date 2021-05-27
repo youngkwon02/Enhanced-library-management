@@ -3,17 +3,18 @@ import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import axios from "axios";
 import React from "react";
 import { useAsync } from "react-async";
+import { getIssueList } from "../lib/api";
 import IssueItem, { IssueItemProps } from "./IssueItem";
 import Layout from "./Layout";
 
-const getIssueList = async () => {
-  const response = await axios.get(`http://localhost:3300/issues`);
-  return response.data;
+type CheckIssuePageProps = {
+  userId: string;
 };
 
-const CheckIssuePage = () => {
+const CheckIssuePage = ({ userId }: CheckIssuePageProps) => {
   const { data, error, isLoading } = useAsync<IssueItemProps[]>({
     promiseFn: getIssueList,
+    userId,
   });
 
   return (
