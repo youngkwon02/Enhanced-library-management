@@ -11,6 +11,7 @@ import DetailInfoModal from "./DetailInfoModal";
 
 export type BookItemProps = {
   id: number;
+  imgLink: string;
   title: string;
   author: string;
   price: number;
@@ -24,6 +25,7 @@ const BookItem = ({
   title,
   author,
   quantity,
+  imgLink,
   price,
   location,
   eBookAvailable,
@@ -34,7 +36,7 @@ const BookItem = ({
   };
   return (
     <Flex onClick={handleBookItemClick} width="100%" cursor="pointer">
-      <Image src="https://via.placeholder.com/150" />
+      <Image width="150px" src={imgLink} />
       <Flex width="100%" background="gray.200">
         <Flex width="100%" direction="column" padding="20px">
           <Heading as="h2" size="lg" textAlign="left">
@@ -58,7 +60,7 @@ const BookItem = ({
         eBookAvailable={eBookAvailable}
       >
         <Flex>
-          <Image mr="30px" src="https://via.placeholder.com/300" />
+          <Image mr="30px" src={imgLink} width="300px" />
           <Stack>
             <Box mr="20px">
               <b>Title</b> : {title}

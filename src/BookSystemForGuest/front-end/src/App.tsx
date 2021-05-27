@@ -17,7 +17,7 @@ function App() {
         <Route path="/book-info" component={BookInfoPage} />
         <Route
           path="/check-issue"
-          component={() => <CheckIssuePage userId={""} />}
+          component={() => <CheckIssuePage userId={"1"} />}
         />
         <Route
           // path 를 따로 정의하지 않으면 모든 상황에 렌더링됨

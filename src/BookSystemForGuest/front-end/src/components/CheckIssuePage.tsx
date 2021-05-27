@@ -12,7 +12,7 @@ type CheckIssuePageProps = {
 };
 
 const CheckIssuePage = ({ userId }: CheckIssuePageProps) => {
-  const { data, error, isLoading } = useAsync<IssueItemProps[]>({
+  const { data, error, isLoading } = useAsync<any>({
     promiseFn: getIssueList,
     userId,
   });
@@ -45,18 +45,18 @@ const CheckIssuePage = ({ userId }: CheckIssuePageProps) => {
                   ) : (
                     <>
                       {data
-                        ?.filter((item) => item.bookType === "paper")
-                        .map((item) => (
+                        ?.filter((item: any) => item.bookType === "paper")
+                        .map((item: any, index: number) => (
                           <IssueItem
-                            key={item.id}
-                            id={item.id}
+                            key={index}
                             title={item.title}
                             author={item.author}
+                            imgLink="1"
                             bookType={item.bookType}
-                            issueStart={item.issueStart}
-                            issueEnd={item.issueEnd}
+                            issueStart={item.startDate}
+                            issueEnd={item.dueDate}
                             calculatedFine={item.calculatedFine}
-                            eBookReadable={item.eBookReadable}
+                            eBookReadable={item.overdueState}
                           />
                         ))}
                     </>
@@ -72,13 +72,13 @@ const CheckIssuePage = ({ userId }: CheckIssuePageProps) => {
                   ) : (
                     <>
                       {data
-                        ?.filter((item) => item.bookType === "e-book")
-                        .map((item) => (
+                        ?.filter((item: any) => item.bookType === "e-book")
+                        .map((item: any) => (
                           <IssueItem
                             key={item.id}
-                            id={item.id}
                             title={item.title}
                             author={item.author}
+                            imgLink="1"
                             bookType={item.bookType}
                             issueStart={item.issueStart}
                             issueEnd={item.issueEnd}

@@ -1,12 +1,21 @@
 import axios from "axios";
 
-export const getBookList = async () => {
-  const { data } = await axios.get(`http://localhost:3300/books`);
+export const getBookList = async ({ criteria, value }: any) => {
+  console.log("criteria", criteria, "value", value);
+  if ((criteria === "title" || criteria === "author") && value !== "") {
+    const { data } = await axios.get(
+      `http://15.165.152.195:8080/books/${criteria}s/${encodeURI(value)}`,
+    );
+    return data;
+  }
+  const { data } = await axios.get(`http://15.165.152.195:8080/books`);
   return data;
 };
 
 export const getIssueList = async ({ userId }: any) => {
-  const { data } = await axios.get(`http://localhost:3300/issues/${userId}`);
+  const { data } = await axios.get(
+    `http://15.165.152.195:8080/issues/${userId}`,
+  );
   return data;
 };
 

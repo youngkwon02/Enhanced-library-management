@@ -8,22 +8,31 @@ import { useAsync } from "react-async";
 import axios from "axios";
 import { getBookList } from "../lib/api";
 
-const onSearch = () => {
-  console.log("Search Clicked");
-};
-
 // TODO: make parameter to getBookList
 
 // TODO: make post request for e book issuing
 
 const BookInfoPage = () => {
-  const { data, error, isLoading } = useAsync<BookItemProps[]>({
-    promiseFn: getBookList,
-  });
-
   const [value, setValue] = useState<string>("");
+  const [criteria, setCriteria] = useState<string>("title");
+
+  const { data, error, isLoading, reload } = useAsync<any>({
+    promiseFn: getBookList,
+    criteria,
+    value,
+  });
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     setValue(event.target.value);
+  };
+  const handleCriteriaChange: React.ChangeEventHandler<HTMLSelectElement> = (
+    event,
+  ) => {
+    setCriteria(event.target.value);
+  };
+
+  const onSearch = () => {
+    reload();
+    console.log("Search Clicked");
   };
 
   return (
@@ -39,6 +48,7 @@ const BookInfoPage = () => {
               width="150px"
               size="lg"
               marginRight="10px"
+              onChange={handleCriteriaChange}
             >
               <option value="title">Title</option>
               <option value="author">Author</option>
@@ -64,12 +74,13 @@ const BookInfoPage = () => {
               <Flex>Error on loading</Flex>
             ) : (
               <>
-                {data?.map((item) => (
+                {data?.map((item: any, index: number) => (
                   <BookItem
-                    key={item.id}
-                    id={item.id}
+                    key={index}
+                    id={item.bookId}
                     title={item.title}
                     author={item.author}
+                    imgLink={item.image_path}
                     price={item.price}
                     quantity={item.quantity}
                     location={item.location}

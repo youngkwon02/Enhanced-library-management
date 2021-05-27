@@ -3,9 +3,9 @@ import React from "react";
 import { DateYMDString } from "../types/date";
 
 export type IssueItemProps = {
-  id: number;
   title: string;
   author: string;
+  imgLink: string;
   bookType: "paper" | "e-book";
   issueStart: DateYMDString;
   issueEnd: DateYMDString;
@@ -14,9 +14,9 @@ export type IssueItemProps = {
 };
 
 const IssueItem = ({
-  id,
   title,
   author,
+  imgLink,
   issueStart,
   issueEnd,
   calculatedFine,
