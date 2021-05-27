@@ -9,8 +9,11 @@ import {
   ModalOverlay,
 } from "@chakra-ui/react";
 import React from "react";
+import { useAsync } from "react-async";
+import { postEBookIssue } from "../lib/api";
 
 type DetailInfoModalProps = {
+  id: number;
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
@@ -19,12 +22,19 @@ type DetailInfoModalProps = {
 };
 
 const DetailInfoModal = ({
+  id,
   isOpen,
   onOpen,
   onClose,
   children,
   eBookAvailable,
 }: DetailInfoModalProps) => {
+  const handleEBookIssue = async () => {
+    const res = await postEBookIssue({ guestId: "1", bookId: id });
+    if (res.status === 200) alert("Issue Success");
+    onClose();
+  };
+
   return (
     <Modal
       isOpen={isOpen}
@@ -40,7 +50,11 @@ const DetailInfoModal = ({
         <ModalBody>{children}</ModalBody>
 
         <ModalFooter>
-          {eBookAvailable && <Button mr={3}>Issue E-Book</Button>}
+          {eBookAvailable && (
+            <Button onClick={handleEBookIssue} mr={3}>
+              Issue E-Book
+            </Button>
+          )}
           <Button colorScheme="blue" onClick={onClose}>
             Close
           </Button>

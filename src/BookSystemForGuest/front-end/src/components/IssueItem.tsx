@@ -24,7 +24,7 @@ const IssueItem = ({
 }: IssueItemProps) => {
   return (
     <Flex width="100%">
-      <Image src="https://via.placeholder.com/150" />
+      <Image width="150px" src={imgLink} />
       <Flex width="100%" background="gray.200">
         <Flex width="100%" direction="column" padding="20px">
           <Heading as="h2" size="lg" textAlign="left">

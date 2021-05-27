@@ -6,7 +6,7 @@ import {
   Stack,
   useDisclosure,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
 import DetailInfoModal from "./DetailInfoModal";
 
 export type BookItemProps = {
@@ -54,6 +54,7 @@ const BookItem = ({
         </Flex>
       </Flex>
       <DetailInfoModal
+        id={id}
         isOpen={isOpen}
         onClose={onClose}
         onOpen={onOpen}

@@ -51,12 +51,12 @@ const CheckIssuePage = ({ userId }: CheckIssuePageProps) => {
                             key={index}
                             title={item.title}
                             author={item.author}
-                            imgLink="1"
+                            imgLink={item.imagePath}
                             bookType={item.bookType}
                             issueStart={item.startDate}
                             issueEnd={item.dueDate}
                             calculatedFine={item.calculatedFine}
-                            eBookReadable={item.overdueState}
+                            eBookReadable={!item.overdueState}
                           />
                         ))}
                     </>
@@ -73,17 +73,17 @@ const CheckIssuePage = ({ userId }: CheckIssuePageProps) => {
                     <>
                       {data
                         ?.filter((item: any) => item.bookType === "e-book")
-                        .map((item: any) => (
+                        .map((item: any, index: number) => (
                           <IssueItem
-                            key={item.id}
+                            key={index}
                             title={item.title}
                             author={item.author}
-                            imgLink="1"
+                            imgLink={item.imagePath}
                             bookType={item.bookType}
                             issueStart={item.issueStart}
                             issueEnd={item.issueEnd}
                             calculatedFine={item.calculatedFine}
-                            eBookReadable={item.eBookReadable}
+                            eBookReadable={!item.overdueState}
                           />
                         ))}
                     </>
