@@ -29,7 +29,6 @@ const BookItem = ({
   eBookAvailable,
 }: BookItemProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [modalBody, setModalBody] = useState<string>("");
   const handleBookItemClick = () => {
     onOpen();
   };

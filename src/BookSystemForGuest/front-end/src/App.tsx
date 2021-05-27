@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <Redirect to="/login" />
+          {<Redirect to="/login" />}
         </Route>
         <Route path="/login" exact={true} component={LoginPage} />
         <Route path="/book-info" component={BookInfoPage} />

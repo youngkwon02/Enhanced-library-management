@@ -1,62 +1,31 @@
 import { SearchIcon } from "@chakra-ui/icons";
 import { Flex, Heading, Stack } from "@chakra-ui/layout";
 import { IconButton, Input, Select } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import BookItem, { BookItemProps } from "./BookItem";
 import Layout from "./Layout";
+import { useAsync } from "react-async";
+import axios from "axios";
 
 const onSearch = () => {
   console.log("Search Clicked");
 };
 
+const getBookList = async () => {
+  const response = await axios.get(`http://localhost:3300/books`);
+  return response.data;
+};
+
 const BookInfoPage = () => {
-  const sample: BookItemProps[] = [
-    {
-      id: 1,
-      title: "Book 1",
-      author: "Author 1",
-      price: 10000,
-      quantity: 3,
-      location: "A1",
-      eBookAvailable: true,
-    },
-    {
-      id: 2,
-      title: "Book 2",
-      author: "Author 2",
-      price: 11000,
-      quantity: 4,
-      location: "A2",
-      eBookAvailable: true,
-    },
-    {
-      id: 3,
-      title: "Book 3",
-      author: "Author 3",
-      price: 12000,
-      quantity: 5,
-      location: "A3",
-      eBookAvailable: false,
-    },
-    {
-      id: 4,
-      title: "Book 4",
-      author: "Author 4",
-      price: 13000,
-      quantity: 6,
-      location: "A4",
-      eBookAvailable: true,
-    },
-    {
-      id: 5,
-      title: "Book 5",
-      author: "Author 5",
-      price: 14000,
-      quantity: 7,
-      location: "A5",
-      eBookAvailable: false,
-    },
-  ];
+  const { data, error, isLoading } = useAsync<BookItemProps[]>({
+    promiseFn: getBookList,
+  });
+
+  const [value, setValue] = useState<string>("");
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
+    setValue(event.target.value);
+  };
+
   return (
     <Layout>
       <>
@@ -74,7 +43,12 @@ const BookInfoPage = () => {
               <option value="title">Title</option>
               <option value="author">Author</option>
             </Select>
-            <Input size="lg" placeholder="Search Book" />
+            <Input
+              value={value}
+              onChange={handleChange}
+              size="lg"
+              placeholder="Search Book"
+            />
             <IconButton
               onClick={onSearch}
               marginLeft="10px"
@@ -84,18 +58,26 @@ const BookInfoPage = () => {
             />
           </Flex>
           <Stack width="80%" alignItems="center">
-            {sample.map((item) => (
-              <BookItem
-                key={item.id}
-                id={item.id}
-                title={item.title}
-                author={item.author}
-                price={item.price}
-                quantity={item.quantity}
-                location={item.location}
-                eBookAvailable={item.eBookAvailable}
-              />
-            ))}
+            {isLoading ? (
+              <Flex>Loading...</Flex>
+            ) : error ? (
+              <Flex>Error on loading</Flex>
+            ) : (
+              <>
+                {data?.map((item) => (
+                  <BookItem
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    author={item.author}
+                    price={item.price}
+                    quantity={item.quantity}
+                    location={item.location}
+                    eBookAvailable={item.eBookAvailable}
+                  />
+                ))}
+              </>
+            )}
           </Stack>
         </Flex>
       </>
