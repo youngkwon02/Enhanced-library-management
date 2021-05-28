@@ -1,0 +1,29 @@
+{% extends 'guest/base.html' %}
+
+{% block content %}
+    <div class="page-subheader">
+        <h1>Search Guest</h1>
+    </div>
+    <div class="content-container">
+        <div class="search-container">
+            <form action="{% url 'search_guest' %}" method="post">
+                {% csrf_token %}
+                <input id="search" type="search" placeholder="Search" aria-label="Search" name="searchParam" value="{{searchParam}}">
+                <button type="submit">search</button>
+            </form>
+        </div>
+        <div class="list">
+            {% if not searchParam %}
+                <h1></h1>
+            {% elif not guests %}
+                <br>
+                <h2>Guest '{{ searchParam }}' Not Found!<h2>
+            {% else %}
+                {% for guest in guests.all %}
+                    <button class="item" onclick="location.href='{% url 'guest_detail' userid=guest.userid %}'">{{ guest.username }}
+                    <br><span class="subitem">{{ guest.userid }}</span></button><br><br>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>        
+{% endblock %}

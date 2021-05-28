@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>로그인</title>
+</head>
+<style>
+  .container {
+    text-align: center;
+    /* margin: 0px 10%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+
+  .form-container {
+    display: inline-block;
+    width: 400px;
+    height: 50vh;
+    background-color: rgba(134, 163, 226, 0.7);
+    border-radius: 16px;
+    text-align: left;
+    padding: 100px;
+  }
+
+  .form-title {
+    font-size: 1.6em;
+    font-weight: bold;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .form-input {
+    width: 180px;
+    height: 1.6em;
+  }
+
+  .idgen-btn {
+    height: 1.6em;
+    line-height: 1.6em;
+    font-size: 1em;
+    display: inline-block;
+    margin-left: 50px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    cursor: pointer;
+    padding: 0 10px;
+    float: right;
+  }
+</style>
+<body>
+  <div class="container">
+    <h2>로그인</h2><br>
+    <div class="form-container">
+      <div>
+        {% csrf_token %}
+        <div>
+          <span class="form-title">ID: </span>
+          <input id="id" class="form-input" name="id" type="text"/>
+        </div><br><br>
+        <div>
+          <span class="form-title">PW: </span>
+          <input id="pw" class="form-input" name="password" type="text"/>
+        </div><br><br>
+        <div style="text-align: center;">
+          <button onclick="getToken()" type="submit">로그인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  const getToken = () => {
+    $.ajax({
+        url: './get-token',
+        type: 'GET',
+        async: false,
+        data: {
+          'id': document.querySelector('#id').value,
+          'password': document.querySelector('#pw').value
+        },
+        success: function(data) {
+          if (data === "NotExist"){
+            alert("Login Fail");
+            return false;
+          }
+          data = JSON.parse(data);
+          if(data['token'] === undefined){
+            alert("Login Fail");
+            return false;
+          }
+          localStorage.setItem('token', data['token']);
+          location.href="../feedback/add";
+        }, error : function(request, status, error ) {   // 오류가 발생했을 때 호출된다. 
+              console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+        }
+    })
+  }
+</script>
+</html>

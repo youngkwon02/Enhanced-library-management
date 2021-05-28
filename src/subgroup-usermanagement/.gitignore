@@ -1,0 +1,6 @@
+.DS_Store
+venv/*
+db.sqlite3
+usermanagement/guest/migrations/*
+usermanagement/feedback/migrations/*
+usermanagement/media/images/*

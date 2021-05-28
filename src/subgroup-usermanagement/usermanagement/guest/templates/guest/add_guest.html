@@ -1,0 +1,84 @@
+{% extends 'guest/base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h2>게스트를 추가하세요.</h2><br>
+    {% if messages %}
+      {% for message in messages %}
+        <script>alert("{{ message }}")</script>
+      {% endfor %}
+    {% endif %}
+    <div class="form-container">
+      <form action="./addAction" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+          <span class="form-title">ID: </span>
+          <input class="form-input" id="idInput" type="text" name="id" disabled=true />
+          <div class="idgen-btn" onclick="idGenerate()">ID Generate</div>
+        </div><br><br>
+        <div>
+          <span class="form-title">Name: </span>
+          <input class="form-input" name="name" type="text"/>
+        </div><br><br>
+        <div>
+          <span class="form-title">PW: </span>
+          <input class="form-input" name="password" type="text"/>
+        </div><br><br>
+        <div>
+          <span class="form-title">E-mail: </span>
+          <input class="form-input" name="email" type="text"/>
+        </div><br><br>
+        <div>
+          <span class="form-title">Phone-Number: </span>
+          <input class="form-input" name="phone" type="text"/>
+        </div><br><br>
+        <div>
+          <span class="form-title">Profile-Image: </span>
+          <input class="form-input" name="profile" type="file"/>
+        </div><br><br><br><br>
+        <div style="text-align: center;">
+          <button type="submit">추가</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<script>
+  const idGenerate = () => {
+    let returnValue = false;
+        $.ajax({
+            url: './add/id-gen',
+            type: 'GET',
+            async: false,
+            data: {},
+            success: function(data) {
+                returnValue = data;
+            }
+        })
+        document.querySelector('#idInput').value = returnValue;
+  }
+
+  window.onload = () => {
+    $.ajax({
+        url: '../login/verify-token',
+        type: 'GET',
+        async: false,
+        data: {
+          'token': localStorage.getItem('token')
+        },
+        success: function(data) {
+          data = JSON.parse(data);
+          console.log(data);
+          if (data.hasOwnProperty('non_field_errors')) {
+            alert("400 Bad Request");
+            location.href="../login";
+          }
+
+          if (data.hasOwnProperty('token') && data['token'][0] === "This field may not be blank."){
+            alert("400 Bad Request");
+            location.href="../login";
+          }
+        }
+    })
+  }
+</script>
+{% endblock %}
