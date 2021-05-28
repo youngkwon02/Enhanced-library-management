@@ -18,3 +18,4 @@ yarn start
 ```
 
 4. 로그인하여 서비스를 사용한다.
+  - 로그인 정보에 관해선 limdongyoung0@gmail.com 으로 메일 주십시오.
