@@ -1,44 +1,63 @@
 import axios from "axios";
 
-export const getBookList = async ({ criteria, value }: any) => {
+export const getBookList = async ({ criteria, value, session }: any) => {
+  console.log("session", session);
   if ((criteria === "title" || criteria === "author") && value !== "") {
     const { data } = await axios.get(
-      `http://15.165.152.195:8080/books/${criteria}s/${encodeURI(value)}`,
+      `http://15.165.152.195:8080/api/books/${criteria}s/${encodeURI(value)}`,
+      {
+        headers: {
+          Authorization: "Bearer " + session,
+        },
+      },
     );
     return data;
   }
-  const { data } = await axios.get(`http://15.165.152.195:8080/books`);
+  const { data } = await axios.get(`http://15.165.152.195:8080/api/books`, {
+    headers: {
+      Authorization: "Bearer " + session,
+    },
+  });
   return data;
 };
 
-export const postEBookIssue = async ({ guestId, bookId }: any) => {
-  const response = await axios.post(`http://15.165.152.195:8080/issues`, {
-    guestId: `${guestId}`,
-    bookId: bookId,
-  });
+export const postEBookIssue = async ({ guestId, bookId, session }: any) => {
+  const response = await axios.post(
+    `http://15.165.152.195:8080/api/issues`,
+    {
+      guestId: `${guestId}`,
+      bookId: bookId,
+    },
+    {
+      headers: {
+        Authorization: "Bearer " + session,
+      },
+    },
+  );
   return response;
 };
 
-export const getIssueList = async ({ userId }: any) => {
+export const getIssueList = async ({ userId, session }: any) => {
   const { data } = await axios.get(
-    `http://15.165.152.195:8080/issues/${userId}`,
+    `http://15.165.152.195:8080/api/issues/${userId}`,
+    {
+      headers: {
+        Authorization: "Bearer " + session,
+      },
+    },
   );
   return data;
 };
 
-const fakeAuth = () =>
-  new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      resolve(true);
-    }, 1000);
-  });
+export const signIn = async ({ id, password }: any) => {
+  const { data } = await axios.post(
+    "http://15.165.152.195:8080/api/authenticate",
+    {
+      username: id,
+      password,
+    },
+  );
+  console.log(data);
 
-export const signIn = async ({ username, password }: any) => {
-  //   const { data } = await axios.post("http://localhost:4000/api/signin", {
-  //     username,
-  //     password,
-  //   });
-
-  const data = await fakeAuth();
   return data;
 };

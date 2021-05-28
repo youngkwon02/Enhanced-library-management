@@ -8,12 +8,13 @@ import {
   ModalHeader,
   ModalOverlay,
 } from "@chakra-ui/react";
+import Cookies from "js-cookie";
 import React from "react";
-import { useAsync } from "react-async";
 import { postEBookIssue } from "../lib/api";
 
 type DetailInfoModalProps = {
   id: number;
+  userId: string;
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
@@ -23,14 +24,16 @@ type DetailInfoModalProps = {
 
 const DetailInfoModal = ({
   id,
+  userId,
   isOpen,
   onOpen,
   onClose,
   children,
   eBookAvailable,
 }: DetailInfoModalProps) => {
+  const session = Cookies.get("session");
   const handleEBookIssue = async () => {
-    const res = await postEBookIssue({ guestId: "1", bookId: id });
+    const res = await postEBookIssue({ guestId: userId, bookId: id, session });
     if (res.status === 200) alert("Issue Success");
     onClose();
   };

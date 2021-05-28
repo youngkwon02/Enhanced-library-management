@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import { Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
@@ -7,17 +7,28 @@ import BookInfoPage from "./components/BookInfoPage";
 import CheckIssuePage from "./components/CheckIssuePage";
 
 function App() {
+  const [userId, setUserId] = useState<string>("");
+
   return (
     <div className="App">
       <Switch>
         <Route exact path="/">
           {<Redirect to="/login" />}
         </Route>
-        <Route path="/login" exact={true} component={LoginPage} />
-        <Route path="/book-info" component={BookInfoPage} />
+        <Route
+          path="/login"
+          exact={true}
+          render={(props: any) => (
+            <LoginPage {...props} setUserId={setUserId} />
+          )}
+        />
+        <Route
+          path="/book-info"
+          render={() => <BookInfoPage userId={userId} />}
+        />
         <Route
           path="/check-issue"
-          component={() => <CheckIssuePage userId={"1"} />}
+          render={() => <CheckIssuePage userId={userId} />}
         />
         <Route
           // path 를 따로 정의하지 않으면 모든 상황에 렌더링됨

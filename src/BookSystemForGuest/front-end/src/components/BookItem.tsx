@@ -11,6 +11,7 @@ import DetailInfoModal from "./DetailInfoModal";
 
 export type BookItemProps = {
   id: number;
+  userId: string;
   imgLink: string;
   title: string;
   author: string;
@@ -22,6 +23,7 @@ export type BookItemProps = {
 
 const BookItem = ({
   id,
+  userId,
   title,
   author,
   quantity,
@@ -55,6 +57,7 @@ const BookItem = ({
       </Flex>
       <DetailInfoModal
         id={id}
+        userId={userId}
         isOpen={isOpen}
         onClose={onClose}
         onOpen={onOpen}

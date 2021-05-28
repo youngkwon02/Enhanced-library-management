@@ -18,6 +18,7 @@ import { FaUserAlt, FaLock } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { signIn } from "../lib/api";
+import Cookies from "js-cookie";
 
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
@@ -39,9 +40,13 @@ const LoginPage = (props: any) => {
 
   const onSubmit = async (data: any) => {
     console.log(data);
-    const success = await signIn(data);
+    const { token } = await signIn(data);
 
-    if (success) {
+    if (token) {
+      console.log("success");
+      Cookies.set("session", token);
+      console.log(data.id);
+      props.setUserId(data.id);
       props.history.push("/book-info");
     }
   };

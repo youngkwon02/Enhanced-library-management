@@ -7,17 +7,20 @@ import Layout from "./Layout";
 import { useAsync } from "react-async";
 import axios from "axios";
 import { getBookList } from "../lib/api";
+import Cookies from "js-cookie";
 
 // TODO: make post request for e book issuing
 
-const BookInfoPage = () => {
+const BookInfoPage = (props: any) => {
   const [value, setValue] = useState<string>("");
   const [criteria, setCriteria] = useState<string>("title");
+  const session = Cookies.get("session");
 
   const { data, error, isLoading, reload } = useAsync<any>({
     promiseFn: getBookList,
     criteria,
     value,
+    session,
   });
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     setValue(event.target.value);
@@ -82,6 +85,7 @@ const BookInfoPage = () => {
                   data.map((item: any, index: number) => (
                     <BookItem
                       key={index}
+                      userId={props.userId}
                       id={item.bookid}
                       title={item.title}
                       author={item.author}

@@ -1,6 +1,7 @@
 import { Flex, Heading, Stack } from "@chakra-ui/layout";
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import axios from "axios";
+import Cookies from "js-cookie";
 import React from "react";
 import { useAsync } from "react-async";
 import { getIssueList } from "../lib/api";
@@ -12,9 +13,12 @@ type CheckIssuePageProps = {
 };
 
 const CheckIssuePage = ({ userId }: CheckIssuePageProps) => {
+  const session = Cookies.get("session");
+
   const { data, error, isLoading } = useAsync<any>({
     promiseFn: getIssueList,
     userId,
+    session,
   });
 
   return (
