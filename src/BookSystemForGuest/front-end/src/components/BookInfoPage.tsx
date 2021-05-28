@@ -34,7 +34,6 @@ const BookInfoPage = (props: any) => {
   const onSearch = (e: any) => {
     e.preventDefault();
     reload();
-    // console.log("Search Clicked");
   };
 
   return (
@@ -93,7 +92,7 @@ const BookInfoPage = (props: any) => {
                       price={item.price}
                       quantity={item.quantity}
                       location={item.location}
-                      eBookAvailable={true}
+                      eBookAvailable={item.bookType === "e-book"}
                     />
                   ))
                 ) : (

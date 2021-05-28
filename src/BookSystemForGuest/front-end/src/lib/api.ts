@@ -1,7 +1,6 @@
 import axios from "axios";
 
 export const getBookList = async ({ criteria, value, session }: any) => {
-  console.log("session", session);
   if ((criteria === "title" || criteria === "author") && value !== "") {
     const { data } = await axios.get(
       `http://15.165.152.195:8080/api/books/${criteria}s/${encodeURI(value)}`,
@@ -57,7 +56,6 @@ export const signIn = async ({ id, password }: any) => {
       password,
     },
   );
-  console.log(data);
 
   return data;
 };

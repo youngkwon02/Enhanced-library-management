@@ -39,13 +39,10 @@ const LoginPage = (props: any) => {
   const handleShowClick = () => setShowPassword(!showPassword);
 
   const onSubmit = async (data: any) => {
-    console.log(data);
     const { token } = await signIn(data);
 
     if (token) {
-      console.log("success");
       Cookies.set("session", token);
-      console.log(data.id);
       props.setUserId(data.id);
       props.history.push("/book-info");
     }
