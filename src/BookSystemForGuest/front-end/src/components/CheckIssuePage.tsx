@@ -60,7 +60,7 @@ const CheckIssuePage = ({ userId }: CheckIssuePageProps) => {
                             issueStart={item.startDate}
                             issueEnd={item.dueDate}
                             calculatedFine={item.calculatedFine}
-                            eBookReadable={!item.overdueState}
+                            eBookReadable={false}
                           />
                         ))}
                     </>
@@ -84,8 +84,8 @@ const CheckIssuePage = ({ userId }: CheckIssuePageProps) => {
                             author={item.author}
                             imgLink={item.imagePath}
                             bookType={item.bookType}
-                            issueStart={item.issueStart}
-                            issueEnd={item.issueEnd}
+                            issueStart={item.startDate}
+                            issueEnd={item.dueDate}
                             calculatedFine={item.calculatedFine}
                             eBookReadable={!item.overdueState}
                           />
