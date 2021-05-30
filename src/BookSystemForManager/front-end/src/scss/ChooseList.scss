@@ -1,0 +1,52 @@
+.BookSelect {
+    display : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    
+}
+.List {
+    display : flex;
+    flex-direction : column;
+    align-content : center;
+}
+.LList {
+    height : 100vh;
+    overflow:auto;
+}
+.rightSide {
+    display : flex;
+    flex-direction: column;
+    height : 100vh;
+    justify-content: center;
+    margin-right:0;
+    padding-right:0;
+    border-left-style:solid;
+    border-width : 2px;
+}
+.RsideList {
+    display : flex;
+    flex-direction: column;
+    width : 600px;
+    height : 100vh;
+    align-items : center;
+    margin-left:90px;
+    padding-left:0;
+    border-left-style :solid;
+    border-right-style:solid;
+    border-width : 2px;
+    overflow:auto;
+}
+.RsideList ul {
+    margin-left : 0px;
+    padding-left : 0px;
+    margin-bottom : 30px;
+}
+.issueButton {
+    width : 500px;
+    height : 70px;
+    border-style : solid;
+    border-width : 2px;
+    color : black;
+    font-size : 50px;
+    font-style : bold;
+}

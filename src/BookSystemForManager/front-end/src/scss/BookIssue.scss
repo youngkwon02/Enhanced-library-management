@@ -1,0 +1,56 @@
+.BookIssue {
+    display : flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items : center;
+}
+.searchBar {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+.searchBar input{
+    width:300px;
+    height:40px;
+    padding:0px;
+}
+.searchBar button{
+    width:60px;
+    height:44px;
+    padding:0px;
+}
+.infoBox {
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+
+    margin-top : 30px;
+    padding-right : 60px;
+    width : 500px;
+    height : 110px;
+    border-style : solid;
+    border-color : black;
+    border-width : 2px;
+}
+.Bbody > .pos {
+    font-size : 15px;
+}
+.Bbody{
+    width:400px;
+}
+.infoBox div {
+    font-size : 18px;
+}
+.infoBox .title {
+    font-size : 26px;
+    font-style : bold;
+}
+.Up_span {
+    display : flex;
+    flex-direction : column;
+    justify-content : center;    
+}
+.In_span {
+    display : flex;
+    justify-content : space-between;    
+}
