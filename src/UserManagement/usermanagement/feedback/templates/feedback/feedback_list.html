@@ -1,0 +1,16 @@
+{% extends 'guest/base.html' %}
+
+{% block content %}
+    <div class="page-subheader">
+        <h1>Feedback List</h1>
+    </div>
+    <div class="content-container">
+        <div class="list">
+            <br>
+            {% for feedback in feedbacks %}
+                <button class="item" onclick="location.href='{% url 'feedback_detail' feedbackid=feedback.feedbackid %}'">
+                {{ feedback.title }}<br><span class="subitem">{{ feedback.create_date }}</span></button><br><br>
+            {% endfor %}
+        </div>            
+    </div>     
+{% endblock %}

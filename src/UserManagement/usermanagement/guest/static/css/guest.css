@@ -1,0 +1,182 @@
+.page-header {
+    background-color: #e78d8d;
+    margin-top: 0;
+    padding: 5px 20px 50px 40px;
+    text-align: center;
+}
+
+.page-header h1 {
+    color: #ffffff;
+    font-size: 40pt;
+    text-decoration: none;
+    padding: 60px 20px 50px 40px;
+    text-shadow: -1px 0 black, 0 1px black, 2px 0 black, 0 -1px black, 2px 2px 5px gray;
+}
+
+.page-header h5 {
+    color: #000000;
+    font-size: 12pt;
+    text-decoration: none;
+    text-align: right;
+}
+
+.menus {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.menu, menu:visited {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(53, 53, 53);
+    padding: 0px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: "Georgia", Times, serif;
+}
+
+.menu:hover, menu:active {
+    background-color: #ffffff;
+    color: rgb(199, 146, 146);
+}
+
+.page-subheader {
+    text-align: center;
+}
+
+.content-container {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Georgia", Times, serif;
+}
+
+.search-container form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.search-container input, button {
+    position: relative;
+    height: 5rem;
+    font-family: "Georgia", Times, serif;
+    border: 0px;
+    color: #2f2f2f;
+    font-size: 15pt;
+}
+
+.search-container input[type="search"] {
+    outline: 0;
+    width: 500px;
+    background: rgb(255, 255, 255);
+    padding: 0 12px;
+    border-radius: .7rem 0 0 0.7rem;
+    appearance: none;
+    
+}
+
+.search-container button {
+    background: #7e7e7e;
+    border-radius: 0 .7rem .7rem 0;
+}
+
+.list {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    padding: 30px;
+    width: 60%;
+    border-top-style: solid;
+    border-color: #a3a3a3;
+    border-width: 1px;
+    color:#555555;
+    font-size: 9pt;
+}
+
+.item, item:visited {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(53, 53, 53);
+    padding: 0px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 23px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: "Georgia", Times, serif;
+    font-weight: bold;
+}
+
+.item:hover, item:active {
+    background-color: #dbdbdb;
+}
+
+.subitem {
+    font-size: 10pt;
+    font-weight: normal;
+}
+
+.detail {
+    text-align: left;
+    margin: auto;
+    padding: 50px;
+    width: 50%;
+    background-color: rgb(255, 250, 244);
+}
+
+.detail .profile {
+    float: left;
+    vertical-align: middle;
+    margin-right: 50px;
+    width: 300px;
+    height: 400px;
+}
+
+.index {
+    font-size: 15pt;
+    color:rgb(116, 116, 116);
+    font-family: "Georgia", Times, serif;
+}
+
+.info {
+    font-size: 25pt;
+    color:rgb(71, 71, 71);
+    font-family: "Georgia", Times, serif;
+}
+
+.content {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    text-align: left;
+    width: 50%;
+}
+
+.written {
+    font-size: 13pt;
+}
+
+.date {
+    color: #616161;
+    font-size: 10pt;
+    text-align: right;
+}

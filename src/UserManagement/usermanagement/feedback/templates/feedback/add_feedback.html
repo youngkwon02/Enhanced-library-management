@@ -1,0 +1,75 @@
+{% extends 'guest/base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h2>피드백을 전송하세요.</h2><br>
+    {% if messages %}
+      {% for message in messages %}
+        <script>alert("{{ message }}")</script>
+      {% endfor %}
+    {% endif %}
+    <div class="form-container">
+      <form action="./addAction" method="POST">
+        {% csrf_token %}
+        <div>
+          <span class="form-title">Title: </span>
+          <input class="form-input" name="title" type="text"/>
+        </div><br><br>
+        <div>
+          <span class="form-title">Anonymity </span>
+          <input class="form-radio" type="radio" name="anonymity" value="open" checked/>
+          <label>Open</label>
+          <input class="form-radio" type="radio" name="anonymity" value="close"/>
+          <label>Close</label>
+        </div><br><br>
+        <div>
+          <span class="form-title">Content: </span>
+          <textarea id="feedback-content" name="content" style="width: 300px; height: 150px;"></textarea>
+        </div><br><br><br><br>
+        <input id="token_holder" name="token" style="display: none" type="text">
+        <div style="text-align: center;">
+          <button type="submit">전송</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<script>
+  const idGenerate = () => {
+    let returnValue = false;
+        $.ajax({
+            url: './add-feedback/id-gen',
+            type: 'GET',
+            async: false,
+            data: {},
+            success: function(data) {
+                returnValue = data;
+            }
+        })
+        document.querySelector('#idInput').value = returnValue;
+  }
+  
+  window.onload = () => {
+    $.ajax({
+        url: '../login/verify-token',
+        type: 'GET',
+        async: false,
+        data: {
+          'token': localStorage.getItem('token')
+        },
+        success: function(data) {
+          data = JSON.parse(data);
+          if (data.hasOwnProperty('non_field_errors')) {
+            alert("400 Bad Request");
+            location.href="../login/login";
+          }
+
+          if (data.hasOwnProperty('token') && data['token'][0] === "This field may not be blank."){
+            alert("400 Bad Request");
+            location.href="../login/login";
+          }
+          document.querySelector('#token_holder').value = data["token"];
+        }
+    })
+  }
+</script>
+{% endblock %}
