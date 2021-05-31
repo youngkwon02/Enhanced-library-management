@@ -1,6 +1,16 @@
 # Book System For Manager 서브그룹 소스 폴더
 
-## 작업 repository
+## 구현 범위
+- UC-03: Add Book
+- UC-04: Issue Paper Book
+- UC-05: Return Book
+- UC-07: Check Issue Info(Manager)
+
+## 역할 분배
+- Front-end: 조원희
+- Back-end: 박준수
+
+## Back-End 개발 Repository
 
 https://github.com/pjs0418/Software_Engineering_Sub_Group_1
 
