@@ -42,4 +42,4 @@ python manage.py runserver
 6. You can login with id `2100000000` and password `1234` to use all services.
 
 7. There are already two guests and one feedback in the database.<br/>
-   You can view the guests by searching with `210000`. (Because all guest id is start with 210000 if it's created in 2021)
+   You can check all guests by searching with the keyword `210000`. (Because all guest IDs start with 210000)
