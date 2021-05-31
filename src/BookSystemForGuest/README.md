@@ -1,5 +1,9 @@
 # Book System For Guest 서브그룹 소스 폴더
 
+## 백엔드 개발 레포지토리
+백엔드 부분 개발 내역에 대해서 확인하실 수 있습니다. 현재 이 디렉토리의 back-end 디렉토리에도 동일한 코드가 있습니다.
+[https://github.com/Beopsik/enhanced-library](https://github.com/Beopsik/enhanced-library)
+
 ## 실행 방법
 
 백엔드 서버는 현재 AWS EC2에서 구동되고 있습니다.
